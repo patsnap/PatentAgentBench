@@ -1,8 +1,8 @@
-# Patent-drafting-bench
+# patent-drafting-bench
 
 中文 | [English](README.en.md)
 
-Patent-drafting-bench 是一个评估大模型及智能体专利撰写能力的数据集，包含 **60 个测试任务**。模型需要依据技术交底书，按指定法域和语言撰写权利要求书、说明书及必要附图，最终交付一份 Word（`.docx`）文档。
+patent-drafting-bench 是一个评估大模型及智能体专利撰写能力的数据集，包含 **60 个测试任务**。模型需要依据技术交底书，按指定法域和语言撰写权利要求书、说明书及必要附图，最终交付一份 Word（`.docx`）文档。
 
 评测关注模型能否将交底中的技术方案转化为完整、合理且有依据的专利申请文本，包括权利要求的完整性、清楚性、保护范围和从属布局，说明书的支持与公开，以及是否编造技术内容。每个任务包含通用评分标准与案例特异评分标准，可用于逐项人工审阅或 LLM judge 评分。
 
@@ -10,7 +10,7 @@ Patent-drafting-bench 是一个评估大模型及智能体专利撰写能力的�
 ## 目录结构
 
 ```text
-Patent-drafting-bench/
+patent-drafting-bench/
 ├── README.md
 ├── README.en.md
 ├── data/

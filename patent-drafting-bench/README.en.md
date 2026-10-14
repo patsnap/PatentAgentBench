@@ -1,8 +1,8 @@
-# Patent-drafting-bench
+# patent-drafting-bench
 
 [中文](README.md) | English
 
-Patent-drafting-bench evaluates the patent drafting capabilities of large language models and AI agents through **60 test tasks**. Each task requires drafting claims, a specification, and necessary drawings from a technical disclosure, following the specified jurisdiction and output language. The final deliverable is a Word (`.docx`) document.
+patent-drafting-bench evaluates the patent drafting capabilities of large language models and AI agents through **60 test tasks**. Each task requires drafting claims, a specification, and necessary drawings from a technical disclosure, following the specified jurisdiction and output language. The final deliverable is a Word (`.docx`) document.
 
 The benchmark evaluates whether a model can turn a disclosed technical solution into a complete, well-supported patent application. It covers claim completeness, clarity, scope, and dependent-claim structure; support and sufficiency of disclosure in the specification; and fabrication of technical content. Tasks include general and case-specific rubrics for item-level human review or LLM-as-a-judge evaluation.
 
@@ -10,7 +10,7 @@ The benchmark evaluates whether a model can turn a disclosed technical solution 
 ## Directory structure
 
 ```text
-Patent-drafting-bench/
+patent-drafting-bench/
 ├── README.md
 ├── README.en.md
 ├── data/
