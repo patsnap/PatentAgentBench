@@ -1,6 +1,6 @@
 # PatSnap Design FTO Bench
 
-PatSnap Design FTO Bench is a dataset for **design patent Freedom-To-Operate (FTO) image retrieval**. Each example contains a query image and a list of annotated target patent publication numbers. The `test` split contains 80 JSONL records in [`data/test.jsonl`](data/test.jsonl). The 80 PNG images are stored under `data/` and referenced by `query_img_path`.
+PatSnap Design FTO Bench is a dataset for **design patent Freedom-To-Operate (FTO) image retrieval**. Each example contains a query image and a list of annotated target patent publication numbers. The `test` split contains 80 JSONL records in [`data/test.jsonl`](data/test.jsonl). The 80 PNG images are stored under [`asset/`](asset/) and referenced by `query_img_path`.
 
 ## Dataset Overview
 
@@ -8,7 +8,7 @@ PatSnap Design FTO Bench is a dataset for **design patent Freedom-To-Operate (FT
 |----------|-------|
 | Test examples | 80 |
 | Jurisdictions | CN: 40; EU: 40 |
-| Query images | 80 PNGs under `data/` |
+| Query images | 80 PNGs under `asset/` |
 | Target patent numbers | 98 entries across 80 examples |
 | Picture type | Invalidation Proceedings |
 | `query_pn` availability | Present in 53 examples; null in 27 |
@@ -25,7 +25,7 @@ with (root / "data/test.jsonl").open(encoding="utf-8") as file:
     samples = [json.loads(line) for line in file]
 
 sample = samples[0]
-image_path = root / "data" / sample["query_img_path"]
+image_path = root / "asset" / sample["query_img_path"]
 print(len(samples), image_path, sample["target_pns"])
 ```
 
@@ -36,7 +36,7 @@ The same dataset is available on [Hugging Face](https://huggingface.co/datasets/
 | Field | Type | Description |
 |-------|------|-------------|
 | `query_pn` | nullable string | Query patent publication number, if available |
-| `query_img_path` | string | Query PNG path relative to `data/` |
+| `query_img_path` | string | Query PNG path relative to `asset/` |
 | `target_pns` | list[string] | Annotated target patent publication numbers |
 | `picture_type` | string | Picture type recorded for the example |
 | `loc` | string | First-level Locarno classification |
