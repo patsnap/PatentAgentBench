@@ -1,56 +1,6 @@
----
-license: cc-by-nc-4.0
-language:
-- en
-- zh
-tags:
-- patent
-- design-patent
-- freedom-to-operate
-- fto
-- image-retrieval
-- cross-modal
-- visual-similarity
-- information-retrieval
-- evaluation
-- benchmark
-task_categories:
-- image-to-image
-- image-classification
-pretty_name: PatSnap Design FTO Bench
-size_categories:
-- n<1K
-configs:
-- config_name: default
-  data_files:
-  - split: test
-    path: data/test.parquet
-dataset_info:
-  features:
-  - name: query_pn
-    dtype: string
-  - name: query_img_path
-    dtype: image
-  - name: target_pns
-    sequence: string
-  - name: picture_type
-    dtype: string
-  - name: loc
-    dtype: string
-  - name: sub_loc
-    dtype: string
-  - name: jurisdiction
-    sequence: string
-  - name: is_public
-    dtype: int64
-  splits:
-  - name: test
-    num_examples: 80
----
-
 # PatSnap Design FTO Bench
 
-PatSnap Design FTO Bench is a dataset for **design patent Freedom-To-Operate (FTO) image retrieval**. Each example contains a query image and a list of annotated target patent publication numbers. The dataset has one `test` split with 80 examples. Query images are embedded in `data/test.parquet`.
+PatSnap Design FTO Bench is a dataset for **design patent Freedom-To-Operate (FTO) image retrieval**. Each example contains a query image and a list of annotated target patent publication numbers. The `test` split contains 80 JSONL records in [`data/test.jsonl`](data/test.jsonl). The 80 PNG images are stored under `data/` and referenced by `query_img_path`.
 
 ## Dataset Overview
 
@@ -58,7 +8,7 @@ PatSnap Design FTO Bench is a dataset for **design patent Freedom-To-Operate (FT
 |----------|-------|
 | Test examples | 80 |
 | Jurisdictions | CN: 40; EU: 40 |
-| Query images | 80 embedded PNGs |
+| Query images | 80 PNGs under `data/` |
 | Target patent numbers | 98 entries across 80 examples |
 | Picture type | Invalidation Proceedings |
 | `query_pn` availability | Present in 53 examples; null in 27 |
@@ -67,22 +17,26 @@ PatSnap Design FTO Bench is a dataset for **design patent Freedom-To-Operate (FT
 ## Quick Start
 
 ```python
-from datasets import load_dataset
+import json
+from pathlib import Path
 
-ds = load_dataset("PatSnap/design-fto-bench", split="test")
-print(len(ds))  # 80
+root = Path("design-fto-bench")
+with (root / "data/test.jsonl").open(encoding="utf-8") as file:
+    samples = [json.loads(line) for line in file]
 
-sample = ds[0]
-image = sample["query_img_path"]  # PIL image
-print(image.size, sample["target_pns"], sample["jurisdiction"])
+sample = samples[0]
+image_path = root / "data" / sample["query_img_path"]
+print(len(samples), image_path, sample["target_pns"])
 ```
+
+The same dataset is available on [Hugging Face](https://huggingface.co/datasets/PatSnap/design-fto-bench) with images embedded in Parquet.
 
 ## Data Fields
 
 | Field | Type | Description |
 |-------|------|-------------|
 | `query_pn` | nullable string | Query patent publication number, if available |
-| `query_img_path` | image | Query PNG embedded in the Parquet file |
+| `query_img_path` | string | Query PNG path relative to `data/` |
 | `target_pns` | list[string] | Annotated target patent publication numbers |
 | `picture_type` | string | Picture type recorded for the example |
 | `loc` | string | First-level Locarno classification |
