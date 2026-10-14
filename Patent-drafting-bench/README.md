@@ -20,8 +20,7 @@ Patent-drafting-bench/
     └── ...（共 60 份技术交底书）
 ```
 
-`test.jsonl` 使用 UTF-8 编码，每行一个任务，共 60 行。`document_fields.input_file` 是**相对于本数据集根目录**的路径，例如 `asset/PD-0005_input.docx`，不是相对于 `data/` 的路径。所有附件均已本地打包，不依赖 COS 或 S3 下载。
-
+`test.jsonl` 使用 UTF-8 编码，每行一个任务，共 60 行。`document_fields.input_file` 是**相对于本数据集根目录**的路径，例如 `asset/PD-0005_input.docx`，不是相对于 `data/` 的路径。
 ## 数据规模与分布
 
 ### 技术领域
