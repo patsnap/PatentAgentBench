@@ -7,7 +7,7 @@
 ## 文件结构
 
 ```text
-OAR-bench/
+oar-bench/
 ├── Readme.md
 ├── Readme.en.md
 ├── assets/
@@ -104,13 +104,13 @@ assets/OAR-<id>.pdf
 
 ## 读取示例
 
-在包含 `OAR-bench/` 的目录中运行以下示例：
+在包含 `oar-bench/` 的目录中运行以下示例：
 
 ```python
 import json
 from pathlib import Path
 
-root = Path("OAR-bench")
+root = Path("oar-bench")
 with (root / "data/test.jsonl").open(encoding="utf-8") as stream:
     cases = [json.loads(line) for line in stream]
 

@@ -7,7 +7,7 @@ OAR Bench contains data for Office Action Response tasks: 40 cases, 40 Office Ac
 ## Package Contents
 
 ```text
-OAR-bench/
+oar-bench/
 ├── Readme.md
 ├── Readme.en.md
 ├── assets/
@@ -104,13 +104,13 @@ Automatic metric definitions retain their existing calculation descriptions, inc
 
 ## Reading Example
 
-Run this example from the directory containing `OAR-bench/`:
+Run this example from the directory containing `oar-bench/`:
 
 ```python
 import json
 from pathlib import Path
 
-root = Path("OAR-bench")
+root = Path("oar-bench")
 with (root / "data/test.jsonl").open(encoding="utf-8") as stream:
     cases = [json.loads(line) for line in stream]
 
