@@ -14,7 +14,7 @@ PatentAgentBench 用于评测大语言模型与 AI Agent 的专业专利任务�
 
 | 数据集 | 样本数 | 任务简介 | Hugging Face |
 | --- | ---: | --- | --- |
-| [权利要求对照](claim-charting-bench/) | 30 | 拆解技术特征，与对比证据对齐并判断公开情况 | — |
+| [权利要求对比](claim-charting-bench/) | 30 | 拆解技术特征，与对比证据对齐并判断公开情况 | — |
 | [外观设计 FTO](design-fto-bench/) | 80 | 根据产品图像检索外观设计专利 | [🤗 查看](https://huggingface.co/datasets/PatSnap/design-fto-bench) |
 | [FTO 检索](fto-search-bench/) | 60 | 根据技术描述检索目标司法辖区的已知风险专利 | — |
 | [新颖性检索](novelty-search-bench/) | 80 | 检索审查员引用的 X 类现有技术及其同族 | [🤗 查看](https://huggingface.co/datasets/PatSnap/novelty-search-bench) |
@@ -32,7 +32,7 @@ PatentAgentBench 用于评测大语言模型与 AI Agent 的专业专利任务�
 
 | 数据集 | 语言 | 司法辖区 |
 | --- | --- | --- |
-| 权利要求对照 | 中文 15 / 英文 15 | 未标注 |
+| 权利要求对比 | 中文 15 / 英文 15 | 未标注 |
 | 外观设计 FTO | 图像输入 | CN 40 / EU 40 |
 | FTO 检索 | 中文 30 / 英文 30 | CN 30 / US 15 / EP 15 |
 | 新颖性检索 | 中文 40 / 英文 40 | CN 39 / US 26 / EP 11 / WO 4 |
@@ -45,7 +45,7 @@ CN：中国；US：美国；EP：欧洲专利局；EU：欧盟；WO：PCT 国际
 
 ### 技术领域与文本覆盖
 
-权利要求对照、FTO 检索、新颖性检索、专利撰写和专利无效检索均覆盖 **IPC A–H 八个部**。外观设计 FTO 采用洛迦诺分类；审查意见答复未提供技术分类标注。
+权利要求对比、FTO 检索、新颖性检索、专利撰写和专利无效检索均覆盖 **IPC A–H 八个部**。外观设计 FTO 采用洛迦诺分类；审查意见答复未提供技术分类标注。
 
 ## 评测指标与 Rubric
 
