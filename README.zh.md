@@ -10,6 +10,8 @@ PatentAgentBench 用于评测大语言模型与 AI Agent 的专业专利任务�
 
 **8 个数据集 · 1,311 条测试记录 · 中英文任务 · 文本、图像与文档输入**
 
+[🤗 Hugging Face 数据集合集](https://huggingface.co/collections/PatSnap/patsnap-pab)
+
 ## 数据集一览
 
 | 数据集 | 样本数 | 任务简介 | Hugging Face |
