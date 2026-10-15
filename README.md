@@ -93,3 +93,9 @@ Follow the dataset links above for task instructions, schemas, and loading examp
   url    = {https://huggingface.co/collections/PatSnap/patsnap-pab}
 }
 ```
+
+## License
+
+The repository license is [MIT](LICENSE). For dataset-specific licensing, see the relevant subset README or Hugging Face page.
+
+Copyright (c) 2026 PatSnap.

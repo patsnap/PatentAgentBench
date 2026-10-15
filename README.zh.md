@@ -93,3 +93,9 @@ CN：中国；US：美国；EP：欧洲专利局；EU：欧盟；WO：PCT 国际
   url    = {https://huggingface.co/collections/PatSnap/patsnap-pab}
 }
 ```
+
+## 许可证
+
+仓库许可证为 [MIT](LICENSE)。各子集的数据许可请参阅对应的 README 或 Hugging Face 页面。
+
+Copyright (c) 2026 PatSnap.
