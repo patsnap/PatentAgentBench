@@ -28,20 +28,20 @@ PatentAgentBench evaluates large language models and AI agents on professional p
 
 ### Languages and jurisdictions
 
-Counts are samples. Language describes task inputs or required outputs; translation counts describe bilingual pairs.
+Language counts are samples of task inputs or required outputs; translation counts describe bilingual pairs.
 
 | Dataset | Language | Jurisdiction |
 | --- | --- | --- |
-| Claim Charting | Chinese 15 / English 15 | Not annotated |
-| Design FTO | Image input | CN 40 / EU 40 |
-| FTO Search | Chinese 30 / English 30 | CN 30 / US 15 / EP 15 |
-| Novelty Search | Chinese 40 / English 40 | CN 39 / US 26 / EP 11 / WO 4 |
-| Patent Drafting | Chinese 31 / English 29 | CN 31 / US 15 / EP 14 |
-| Patent Invalidity Search | Chinese 40 / English 40 | CN 40 / US 40 |
-| Patent Translation | Chinese/English pairs 854 / Chinese only 27 | CN 533 / Not annotated 348 |
-| Office Action Response | Chinese 13 / English 27 | CN 13 / US 14 / EP 13 |
+| Claim Charting | Chinese 15 / English 15 | CN / US / EP |
+| Design FTO | Image input | CN / EU |
+| FTO Search | Chinese 30 / English 30 | CN / US / EP |
+| Novelty Search | Chinese 40 / English 40 | CN / US / EP / WO |
+| Patent Drafting | Chinese 31 / English 29 | CN / US / EP |
+| Patent Invalidity Search | Chinese 40 / English 40 | CN / US |
+| Patent Translation | Chinese/English pairs 854 / Chinese only 27 | CN / Not annotated |
+| Office Action Response | Chinese 13 / English 27 | CN / US / EP |
 
-CN: China; US: United States; EP: European Patent Office; EU: European Union; WO: PCT international publication. Translation jurisdictions are counted from source patent publication numbers.
+CN: China; US: United States; EP: European Patent Office; EU: European Union; WO: PCT international publication. Translation jurisdictions are identified from source patent publication numbers.
 
 ### Technical and text coverage
 
