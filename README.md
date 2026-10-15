@@ -82,3 +82,14 @@ Every dataset provides a test split in UTF-8 JSONL, with one sample per line.
 | `OAR-bench/assets/` | 40 Office Actions (PDF) |
 
 Follow the dataset links above for task instructions, schemas, and loading examples. The repository provides data and scoring definitions; it does not include executable evaluation scripts.
+
+## Citation
+
+```bibtex
+@dataset{patsnap_patent_drafting_bench_2026,
+  title  = {PatSnap Patent Drafting Bench},
+  author = {PatSnap},
+  year   = {2026},
+  url    = {https://huggingface.co/datasets/PatSnap/patent-drafting-bench}
+}
+```

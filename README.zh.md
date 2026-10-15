@@ -82,3 +82,14 @@ CN：中国；US：美国；EP：欧洲专利局；EU：欧盟；WO：PCT 国际
 | `OAR-bench/assets/` | 40 份审查意见通知书（PDF） |
 
 各子集的任务说明、数据格式与读取方式见上方数据集链接。仓库提供数据和评分定义，未包含可执行评测脚本。
+
+## 引用
+
+```bibtex
+@dataset{patsnap_patent_drafting_bench_2026,
+  title  = {PatSnap Patent Drafting Bench},
+  author = {PatSnap},
+  year   = {2026},
+  url    = {https://huggingface.co/datasets/PatSnap/patent-drafting-bench}
+}
+```
