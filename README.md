@@ -1,7 +1,7 @@
 # PatentAgentBench (PAB)
 
 <p align="left">
-  <img src="assets/patsnap-logo.png" alt="PatSnap" width="326">
+  <img src="patsnap-logo.png" alt="PatSnap" width="326">
 </p>
 
 **English** | [简体中文](README.zh.md)
