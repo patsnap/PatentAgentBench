@@ -12,17 +12,17 @@ PatentAgentBench evaluates large language models and AI agents on professional p
 
 ## Datasets
 
-| Dataset | Samples | Task |
-| --- | ---: | --- |
-| [Claim Charting](claim-charting-bench/) | 30 | Decompose claims into features, align evidence, and judge disclosure |
-| [Design FTO](design-fto-bench/) | 80 | Retrieve design patents from product images |
-| [FTO Search](fto-search-bench/) | 60 | Retrieve known risk patents from technical descriptions in a target jurisdiction |
-| [Novelty Search](novelty-search-bench/) | 80 | Retrieve examiner-cited X-type prior art and its patent families |
-| [Patent Drafting](patent-drafting-bench/) | 60 | Draft claims, a specification, and necessary drawings from a technical disclosure |
-| [Patent Invalidity Search](patent-invalidity-search-bench/) | 80 | Retrieve evidence from real invalidation cases using patent claims |
-| [Patent Translation](patent-translation-bench/) | 881 | Evaluate Chinese/English patent text translation |
-| [Office Action Response (OAR)](OAR-bench/) | 40 | Draft responses using Office Actions and case materials |
-| **Total** | **1,311** | |
+| Dataset | Samples | Task | Hugging Face |
+| --- | ---: | --- | --- |
+| [Claim Charting](claim-charting-bench/) | 30 | Decompose claims into features, align evidence, and judge disclosure | — |
+| [Design FTO](design-fto-bench/) | 80 | Retrieve design patents from product images | [🤗 View](https://huggingface.co/datasets/PatSnap/design-fto-bench) |
+| [FTO Search](fto-search-bench/) | 60 | Retrieve known risk patents from technical descriptions in a target jurisdiction | — |
+| [Novelty Search](novelty-search-bench/) | 80 | Retrieve examiner-cited X-type prior art and its patent families | [🤗 View](https://huggingface.co/datasets/PatSnap/novelty-search-bench) |
+| [Patent Drafting](patent-drafting-bench/) | 60 | Draft claims, a specification, and necessary drawings from a technical disclosure | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-drafting-bench) |
+| [Patent Invalidity Search](patent-invalidity-search-bench/) | 80 | Retrieve evidence from real invalidation cases using patent claims | — |
+| [Patent Translation](patent-translation-bench/) | 881 | Evaluate Chinese/English patent text translation | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-translation-bench) |
+| [Office Action Response (OAR)](OAR-bench/) | 40 | Draft responses using Office Actions and case materials | — |
+| **Total** | **1,311** | | |
 
 ## Data distributions
 
