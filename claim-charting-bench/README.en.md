@@ -6,7 +6,7 @@ Claim Charting Bench evaluates whether a model can break a target patent claim i
 
 ## Data and scope
 
-The public test set is [`data/test.jsonl`](data/test.jsonl): **30 records**, one per line, encoded as UTF-8 JSONL. The supplied introduction HTML describes a 102-record full dataset. Its statistics do not describe this published file. All counts below were calculated from the 30 records in this release.
+The public test set is [`data/test.jsonl`](data/test.jsonl): **30 records**, one per line, encoded as UTF-8 JSONL. All counts below were calculated from the 30 records in this release.
 
 | Dimension | Public test set |
 | --- | ---: |
