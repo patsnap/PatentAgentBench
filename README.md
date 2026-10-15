@@ -1,7 +1,7 @@
 # PatentAgentBench (PAB)
 
 <p align="left">
-  <img src="patsnap-logo.png" alt="PatSnap" width="326">
+  <img src="patsnap-logo.png" alt="Patsnap" width="326">
 </p>
 
 **English** | [简体中文](README.zh.md)
@@ -88,7 +88,7 @@ Follow the dataset links above for task instructions, schemas, and loading examp
 ```bibtex
 @dataset{patsnap_patentagentbench_2026,
   title  = {PatentAgentBench (PAB)},
-  author = {PatSnap},
+  author = {Patsnap},
   year   = {2026},
   url    = {https://huggingface.co/collections/PatSnap/patsnap-pab}
 }
@@ -100,4 +100,4 @@ The code and project documentation in the PatentAgentBench (PAB) repository are 
 
 PatentAgentBench (PAB) datasets and related outputs may contain errors or omissions and do not constitute legal advice. Users must review and validate them before relying on them, ensure they have the necessary rights to process materials, and comply with applicable licenses, laws, and regulations. Read the [full disclaimer](DISCLAIMER.md) before using PAB.
 
-Copyright (c) 2026 PatSnap.
+Copyright (c) 2026 Patsnap.

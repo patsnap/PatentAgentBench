@@ -14,7 +14,7 @@ tags:
 - cross-jurisdiction
 task_categories:
 - text-retrieval
-pretty_name: PatSnap Novelty Search Bench
+pretty_name: Patsnap Novelty Search Bench
 size_categories:
 - n<1K
 configs:
@@ -51,7 +51,7 @@ dataset_info:
     num_examples: 80
 ---
 
-# PatSnap Novelty Search Bench
+# Patsnap Novelty Search Bench
 
 This dataset contains 80 patent novelty search examples. Each example has a query patent publication number and publication numbers for examiner cited X type prior art. The examples include references cited for the query patent and for members of its patent family.
 
@@ -107,8 +107,8 @@ The cited references are not an exhaustive list of relevant prior art. The datas
 }
 
 @dataset{patsnap_novelty_search_bench_2026,
-  title  = {PatSnap Novelty Search Bench},
-  author = {PatSnap},
+  title  = {Patsnap Novelty Search Bench},
+  author = {Patsnap},
   year   = {2026},
   url    = {https://huggingface.co/datasets/PatSnap/novelty-search-bench}
 }

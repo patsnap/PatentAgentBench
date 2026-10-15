@@ -1,4 +1,4 @@
-# PatSnap Patent Translation Bench
+# Patsnap Patent Translation Bench
 
 This benchmark contains 881 patent text examples for evaluating Chinese and
 English translation. It covers word, character, sentence, paragraph, and
@@ -68,8 +68,8 @@ print(len(test))  # 881
 
 ```bibtex
 @dataset{patsnap_patent_translation_bench_2026,
-  title={PatSnap Patent Translation Bench},
-  author={PatSnap},
+  title={Patsnap Patent Translation Bench},
+  author={Patsnap},
   year={2026},
   url={https://huggingface.co/datasets/PatSnap/patent-translation-bench}
 }

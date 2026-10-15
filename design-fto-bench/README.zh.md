@@ -1,8 +1,8 @@
-# PatSnap 外观设计 FTO 基准数据集
+# Patsnap 外观设计 FTO 基准数据集
 
 [English](README.md) | 中文
 
-PatSnap Design FTO Bench 是用于**外观设计专利自由实施（FTO）图像检索**的数据集。每条样本包含一张查询图片和一组标注的目标专利公开号。`test` 测试集在 [`data/test.jsonl`](data/test.jsonl) 中包含 80 条 JSONL 记录。80 张 PNG 图片存放在 [`asset/`](asset/) 下，由 `query_img_path` 字段引用。
+Patsnap Design FTO Bench 是用于**外观设计专利自由实施（FTO）图像检索**的数据集。每条样本包含一张查询图片和一组标注的目标专利公开号。`test` 测试集在 [`data/test.jsonl`](data/test.jsonl) 中包含 80 条 JSONL 记录。80 张 PNG 图片存放在 [`asset/`](asset/) 下，由 `query_img_path` 字段引用。
 
 ## 数据集概览
 
@@ -52,8 +52,8 @@ print(len(samples), image_path, sample["target_pns"])
 
 ```bibtex
 @dataset{patsnap_design_fto_bench_2026,
-  title  = {PatSnap Design FTO Bench},
-  author = {PatSnap},
+  title  = {Patsnap Design FTO Bench},
+  author = {Patsnap},
   year   = {2026},
   url    = {https://huggingface.co/datasets/PatSnap/design-fto-bench},
   note   = {Design patent FTO image retrieval dataset}

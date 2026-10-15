@@ -12,7 +12,7 @@ This disclaimer covers the published PAB records, patent texts, images, Office A
 
 The repository's code and project documentation are licensed under the [MIT License](LICENSE). Individual datasets and attachments may carry separate terms specified in their READMEs or Hugging Face pages. For materials released under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/), users must observe its attribution and noncommercial conditions. This disclaimer does not grant additional commercial-use rights or replace applicable licenses.
 
-Third-party patent documents, images, and other source materials remain subject to applicable rights and terms. Inclusion in PAB, public availability, or a link to an external resource does not by itself grant rights to exploit the underlying inventions, access restricted databases, or use third-party materials beyond the rights otherwise available to the user. Use of the PatSnap name or logo does not imply endorsement of a user's system, results, or services.
+Third-party patent documents, images, and other source materials remain subject to applicable rights and terms. Inclusion in PAB, public availability, or a link to an external resource does not by itself grant rights to exploit the underlying inventions, access restricted databases, or use third-party materials beyond the rights otherwise available to the user. Use of the Patsnap name or logo does not imply endorsement of a user's system, results, or services.
 
 ## No professional advice or certification
 
@@ -38,6 +38,6 @@ Users are responsible for complying with applicable licenses, laws, regulations,
 
 ## Warranty and liability
 
-PAB materials are provided “AS IS” and “AS AVAILABLE”, without warranties of accuracy, completeness, currency, fitness for a particular purpose, noninfringement, or uninterrupted availability. To the maximum extent permitted by applicable law, PatSnap, the maintainers, and contributors are not liable for claims, damages, losses, liabilities, costs, or expenses arising from use of the benchmark, its materials, or related outputs, including missed patent references, filing or prosecution consequences, litigation or transaction losses, disclosure of confidential information, or intellectual-property disputes.
+PAB materials are provided “AS IS” and “AS AVAILABLE”, without warranties of accuracy, completeness, currency, fitness for a particular purpose, noninfringement, or uninterrupted availability. To the maximum extent permitted by applicable law, Patsnap, the maintainers, and contributors are not liable for claims, damages, losses, liabilities, costs, or expenses arising from use of the benchmark, its materials, or related outputs, including missed patent references, filing or prosecution consequences, litigation or transaction losses, disclosure of confidential information, or intellectual-property disputes.
 
 This notice does not replace applicable license terms, reduce rights granted under those terms, or exclude liability that cannot lawfully be excluded.
