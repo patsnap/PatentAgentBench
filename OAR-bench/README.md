@@ -5,13 +5,10 @@ OAR Bench contains data for Office Action Response tasks: 40 cases, 40 Office Ac
 ## Package Contents
 
 ```text
-OAR_bench/
+OAR-bench/
 ├── README.md
 ├── assets/
-│   └── oa/
-│       ├── CN/OAR-<id>.pdf
-│       ├── EP/OAR-<id>.pdf
-│       └── US/OAR-<id>.pdf
+│   └── OAR-<id>.pdf
 └── data/
     └── test.jsonl
 ```
@@ -63,7 +60,7 @@ Structured fields use JSON objects, arrays, and `null` values as stored in the d
 
 Chinese text in `scoring_policy`, `layer_weights`, and `metrics` has been translated into English. `field_values` and `expert_facts` retain their source-language content, including Chinese text. Each task's requested response language is specified by `field_values.eval_task_config.output_language`.
 
-The only bundled attachment files are the 40 OA PDFs under `assets/oa/`. Description source images, source-document PDFs referenced in text, and internal audit files are not included. Local filesystem paths and internal audit paths in the data have been replaced with explicit redaction notices. Public source URLs and document identifiers are retained. These notices identify unavailable sources and are not usable file links.
+The only bundled attachment files are the 40 OA PDFs under `assets/`. Description source images, source-document PDFs referenced in text, and internal audit files are not included. Local filesystem paths and internal audit paths in the data have been replaced with explicit redaction notices. Public source URLs and document identifiers are retained. These notices identify unavailable sources and are not usable file links.
 
 OCR text may not fully preserve equations, tables, or page layout. Redacting a source path does not supply the missing source material. All 101 entries in `cited_document_sources` currently have `content_included: false`; they provide metadata rather than cited-document full text. Any additional text actually provided is stored within the record, including `supplemental_source_documents` where present.
 
@@ -71,13 +68,13 @@ The records include both task materials and evaluator reference information. Thi
 
 ## Locating an OA PDF
 
-Each OA filename is derived from `field_values.id`, and its directory from `field_values.country`:
+Each OA filename is derived from `field_values.id`. All 40 PDFs are stored directly in `assets/`:
 
 ```text
-assets/oa/<country>/OAR-<id>.pdf
+assets/OAR-<id>.pdf
 ```
 
-For example, case `349` in jurisdiction `CN` corresponds to `assets/oa/CN/OAR-349.pdf`. No external mapping file is needed. The JSONL records contain neither an OA path field nor a PDF checksum field.
+For example, case `349` in jurisdiction `CN` corresponds to `assets/OAR-349.pdf`. No external mapping file is needed. The JSONL records contain neither an OA path field nor a PDF checksum field.
 
 ## Scoring Criteria and References
 
@@ -106,19 +103,19 @@ Automatic metric definitions retain their existing calculation descriptions, inc
 
 ## Reading Example
 
-Run this example from the directory containing `OAR_bench/`:
+Run this example from the directory containing `OAR-bench/`:
 
 ```python
 import json
 from pathlib import Path
 
-root = Path("OAR_bench")
+root = Path("OAR-bench")
 with (root / "data/test.jsonl").open(encoding="utf-8") as stream:
     cases = [json.loads(line) for line in stream]
 
 case = cases[0]
 fields = case["field_values"]
-oa_pdf = root / "assets/oa" / fields["country"] / f"OAR-{fields['id']}.pdf"
+oa_pdf = root / "assets" / f"OAR-{fields['id']}.pdf"
 metric = next(item for item in case["metrics"] if item["metric_id"] == "RE-1")
 
 def resolve(pointer):
