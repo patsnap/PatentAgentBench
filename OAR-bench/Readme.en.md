@@ -1,6 +1,6 @@
-# OAR Bench
+# OAR Office Action Response Benchmark Dataset
 
-[中文](readme.md) | English
+[中文](Readme.md) | English
 
 OAR Bench contains data for Office Action Response tasks: 40 cases, 40 Office Action (OA) PDFs totaling 229 pages, and scoring criteria with their supporting field values. The cases cover 13 Chinese (CN), 13 European (EP), and 14 United States (US) patent applications.
 
@@ -8,8 +8,8 @@ OAR Bench contains data for Office Action Response tasks: 40 cases, 40 Office Ac
 
 ```text
 OAR-bench/
-├── readme.md
-├── readme.en.md
+├── Readme.md
+├── Readme.en.md
 ├── assets/
 │   └── OAR-<id>.pdf
 └── data/
@@ -18,7 +18,7 @@ OAR-bench/
 
 `data/test.jsonl` contains one complete JSON object per line, encoded as UTF-8. All 40 case records and their scoring information are stored in this single file. Line breaks within text values are escaped as `\n`.
 
-The package contains source materials, structured reference data, expert facts where available, and scoring criteria. It contains no model responses, evaluation results, or scoring scripts. A separate scoring script is planned to implement the automatic metrics.
+The package contains source materials, structured reference data, expert facts where available, and scoring criteria. It contains no model responses, evaluation results, or scoring scripts.
 
 ## Record Structure
 
@@ -61,11 +61,9 @@ Structured fields use JSON objects, arrays, and `null` values as stored in the d
 
 ## Languages and Materials
 
-Chinese text in `scoring_policy`, `layer_weights`, and `metrics` has been translated into English. `field_values` and `expert_facts` retain their source-language content, including Chinese text. Each task's requested response language is specified by `field_values.eval_task_config.output_language`.
+The bundled attachments are the 40 OA PDFs under `assets/`.
 
-The only bundled attachment files are the 40 OA PDFs under `assets/`. Description source images, source-document PDFs referenced in text, and internal audit files are not included. Local filesystem paths and internal audit paths in the data have been replaced with explicit redaction notices. Public source URLs and document identifiers are retained. These notices identify unavailable sources and are not usable file links.
-
-OCR text may not fully preserve equations, tables, or page layout. Redacting a source path does not supply the missing source material. All 101 entries in `cited_document_sources` currently have `content_included: false`; they provide metadata rather than cited-document full text. Any additional text actually provided is stored within the record, including `supplemental_source_documents` where present.
+Any additional text actually provided is stored within the case record, including `supplemental_source_documents` where present.
 
 The records include both task materials and evaluator reference information. This data package does not prescribe a complete model-input or external-retrieval protocol; an evaluation setup must define those choices explicitly.
 
@@ -77,7 +75,7 @@ Each OA filename is derived from `field_values.id`. All 40 PDFs are stored direc
 assets/OAR-<id>.pdf
 ```
 
-For example, case `349` in jurisdiction `CN` corresponds to `assets/OAR-349.pdf`. No external mapping file is needed. The JSONL records contain neither an OA path field nor a PDF checksum field.
+For example, Chinese case `349` corresponds to `assets/OAR-349.pdf`. No external mapping file is needed. The JSONL records contain neither an OA path field nor a PDF checksum field.
 
 ## Scoring Criteria and References
 
