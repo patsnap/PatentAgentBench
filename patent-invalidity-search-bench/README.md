@@ -101,10 +101,6 @@
 | `invalid_evdience_patent_role` | object | 按主要、次要等角色组织的证据文献 |
 | `invalid_evdience_patent_legal_basis` | object | 按新颖性、创造性等依据组织的证据文献 |
 | `claims` | string | 用作检索输入的权利要求文本 |
-| `is_benchmark` | integer | Benchmark 标记；公开文件中均为 1 |
-| `is_delete` | integer | 软删除标记；公开文件中均为 0 |
-| `create_ts` | string | 数据创建时间 |
-| `update_ts` | string | 数据更新时间 |
 | `is_public` | integer | 公开标记；公开文件中均为 1 |
 
 > [!NOTE]
@@ -145,10 +141,6 @@
     "创造性": ["PATENT_A", "PATENT_B"]
   },
   "claims": "权利要求文本……",
-  "is_benchmark": 1,
-  "is_delete": 0,
-  "create_ts": "2026-09-17T13:38:27",
-  "update_ts": "2026-09-17T15:54:06",
   "is_public": 1
 }
 ```

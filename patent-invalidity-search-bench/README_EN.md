@@ -105,10 +105,6 @@ file can be processed as a stream without loading the entire dataset into memory
 | `invalid_evdience_patent_role` | object | Evidence references grouped by primary, secondary, or other roles |
 | `invalid_evdience_patent_legal_basis` | object | Evidence references grouped by novelty, inventive step, or other legal grounds |
 | `claims` | string | Patent claims used as the retrieval input |
-| `is_benchmark` | integer | Benchmark flag; always 1 in the public file |
-| `is_delete` | integer | Soft-deletion flag; always 0 in the public file |
-| `create_ts` | string | Record creation timestamp |
-| `update_ts` | string | Record update timestamp |
 | `is_public` | integer | Public-release flag; always 1 in the public file |
 
 > [!NOTE]
@@ -153,10 +149,6 @@ placeholders.
     "创造性": ["PATENT_A", "PATENT_B"]
   },
   "claims": "Claim text...",
-  "is_benchmark": 1,
-  "is_delete": 0,
-  "create_ts": "2026-09-17T13:38:27",
-  "update_ts": "2026-09-17T15:54:06",
   "is_public": 1
 }
 ```
