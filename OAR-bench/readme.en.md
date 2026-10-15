@@ -1,12 +1,15 @@
 # OAR Bench
 
+[中文](readme.md) | English
+
 OAR Bench contains data for Office Action Response tasks: 40 cases, 40 Office Action (OA) PDFs totaling 229 pages, and scoring criteria with their supporting field values. The cases cover 13 Chinese (CN), 13 European (EP), and 14 United States (US) patent applications.
 
 ## Package Contents
 
 ```text
 OAR-bench/
-├── README.md
+├── readme.md
+├── readme.en.md
 ├── assets/
 │   └── OAR-<id>.pdf
 └── data/
