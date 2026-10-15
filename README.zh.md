@@ -16,7 +16,7 @@ PatentAgentBench 用于评测大语言模型与 AI Agent 的专业专利任务�
 
 | 数据集 | 样本数 | 任务简介 | Hugging Face |
 | --- | ---: | --- | --- |
-| [权利要求对比](claim-charting-bench/) | 30 | 拆解技术特征，与对比证据对齐并判断公开情况 | — |
+| [权利要求对比](claim-charting-bench/) | 30 | 拆解技术特征，与对比证据对齐并判断公开情况 | [🤗 查看](https://huggingface.co/datasets/PatSnap/claim-charting-bench) |
 | [外观设计 FTO](design-fto-bench/) | 80 | 根据产品图像检索外观设计专利 | [🤗 查看](https://huggingface.co/datasets/PatSnap/design-fto-bench) |
 | [FTO 检索](fto-search-bench/) | 60 | 根据技术描述检索目标司法辖区的已知风险专利 | — |
 | [新颖性检索](novelty-search-bench/) | 80 | 检索审查员引用的 X 类现有技术及其同族 | [🤗 查看](https://huggingface.co/datasets/PatSnap/novelty-search-bench) |

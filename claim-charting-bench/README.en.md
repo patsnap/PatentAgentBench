@@ -58,4 +58,4 @@ Keep `feature_res` as ground truth and exclude it from the evaluated model's inp
 
 ## Construction background and license
 
-The supplied dataset introduction describes candidate selection, annotation by external patent-analysis experts, evidence calibration, and dataset review. This repository publishes only the 30 public records above. See the repository's root [LICENSE](../LICENSE) for terms of use.
+The supplied dataset introduction describes candidate selection, annotation by external patent-analysis experts, evidence calibration, and dataset review. This repository publishes only the 30 public records above. The dataset is also available on [Hugging Face](https://huggingface.co/datasets/PatSnap/claim-charting-bench), where its license is marked [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).

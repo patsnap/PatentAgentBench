@@ -16,7 +16,7 @@ PatentAgentBench evaluates large language models and AI agents on professional p
 
 | Dataset | Samples | Task | Hugging Face |
 | --- | ---: | --- | --- |
-| [Claim Charting](claim-charting-bench/) | 30 | Decompose claims into features, align evidence, and judge disclosure | — |
+| [Claim Charting](claim-charting-bench/) | 30 | Decompose claims into features, align evidence, and judge disclosure | [🤗 View](https://huggingface.co/datasets/PatSnap/claim-charting-bench) |
 | [Design FTO](design-fto-bench/) | 80 | Retrieve design patents from product images | [🤗 View](https://huggingface.co/datasets/PatSnap/design-fto-bench) |
 | [FTO Search](fto-search-bench/) | 60 | Retrieve known risk patents from technical descriptions in a target jurisdiction | — |
 | [Novelty Search](novelty-search-bench/) | 80 | Retrieve examiner-cited X-type prior art and its patent families | [🤗 View](https://huggingface.co/datasets/PatSnap/novelty-search-bench) |

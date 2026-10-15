@@ -58,4 +58,4 @@ ground_truth = sample["feature_res"]
 
 ## 构建背景与许可
 
-随附的数据集介绍说明：候选样本经过选池、外部专利分析专家标注、证据校准与评测集整理。本仓库仅发布上述 30 条公开记录。使用条款见仓库根目录的 [LICENSE](../LICENSE)。
+随附的数据集介绍说明：候选样本经过选池、外部专利分析专家标注、证据校准与评测集整理。本仓库仅发布上述 30 条公开记录。数据集同时发布于 [Hugging Face](https://huggingface.co/datasets/PatSnap/claim-charting-bench)，许可标记为 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)。
