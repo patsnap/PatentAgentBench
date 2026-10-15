@@ -86,10 +86,10 @@ Follow the dataset links above for task instructions, schemas, and loading examp
 ## Citation
 
 ```bibtex
-@dataset{patsnap_patent_drafting_bench_2026,
-  title  = {PatSnap Patent Drafting Bench},
+@dataset{patsnap_patentagentbench_2026,
+  title  = {PatentAgentBench (PAB)},
   author = {PatSnap},
   year   = {2026},
-  url    = {https://huggingface.co/datasets/PatSnap/patent-drafting-bench}
+  url    = {https://huggingface.co/collections/PatSnap/patsnap-pab}
 }
 ```

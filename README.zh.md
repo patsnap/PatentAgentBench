@@ -86,10 +86,10 @@ CN：中国；US：美国；EP：欧洲专利局；EU：欧盟；WO：PCT 国际
 ## 引用
 
 ```bibtex
-@dataset{patsnap_patent_drafting_bench_2026,
-  title  = {PatSnap Patent Drafting Bench},
+@dataset{patsnap_patentagentbench_2026,
+  title  = {PatentAgentBench (PAB)},
   author = {PatSnap},
   year   = {2026},
-  url    = {https://huggingface.co/datasets/PatSnap/patent-drafting-bench}
+  url    = {https://huggingface.co/collections/PatSnap/patsnap-pab}
 }
 ```
