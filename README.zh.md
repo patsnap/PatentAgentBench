@@ -23,7 +23,7 @@ PatentAgentBench 用于评测大语言模型与 AI Agent 的专业专利任务�
 | [专利撰写](patent-drafting-bench/) | 60 | 根据技术交底书撰写权利要求、说明书及必要附图 | [🤗 查看](https://huggingface.co/datasets/PatSnap/patent-drafting-bench) |
 | [专利无效检索](patent-invalidity-search-bench/) | 80 | 根据权利要求检索真实无效案件中的证据 | [🤗 查看](https://huggingface.co/datasets/PatSnap/patent-invalidity-search-bench) |
 | [专利翻译](patent-translation-bench/) | 881 | 评测中英文专利文本翻译 | [🤗 查看](https://huggingface.co/datasets/PatSnap/patent-translation-bench) |
-| [审查意见答复（OAR）](OAR-bench/) | 40 | 根据审查意见及案件材料撰写答复 | — |
+| [审查意见答复（OAR）](OAR-bench/) | 40 | 根据审查意见及案件材料撰写答复 | [🤗 查看](https://huggingface.co/datasets/PatSnap/patent-oar-bench) |
 | **合计** | **1,311** | | |
 
 ## 数据分布

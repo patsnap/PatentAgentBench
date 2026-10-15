@@ -23,7 +23,7 @@ PatentAgentBench evaluates large language models and AI agents on professional p
 | [Patent Drafting](patent-drafting-bench/) | 60 | Draft claims, a specification, and necessary drawings from a technical disclosure | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-drafting-bench) |
 | [Patent Invalidity Search](patent-invalidity-search-bench/) | 80 | Retrieve evidence from real invalidation cases using patent claims | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-invalidity-search-bench) |
 | [Patent Translation](patent-translation-bench/) | 881 | Evaluate Chinese/English patent text translation | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-translation-bench) |
-| [Office Action Response (OAR)](OAR-bench/) | 40 | Draft responses using Office Actions and case materials | — |
+| [Office Action Response (OAR)](OAR-bench/) | 40 | Draft responses using Office Actions and case materials | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-oar-bench) |
 | **Total** | **1,311** | | |
 
 ## Data distributions
