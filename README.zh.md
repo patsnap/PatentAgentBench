@@ -94,8 +94,10 @@ CN：中国；US：美国；EP：欧洲专利局；EU：欧盟；WO：PCT 国际
 }
 ```
 
-## 许可证
+## 许可证与免责声明
 
-仓库许可证为 [MIT](LICENSE)。各子集的数据许可请参阅对应的 README 或 Hugging Face 页面。
+PatentAgentBench（PAB）仓库中的代码和项目文档采用 [MIT 许可证](LICENSE)。PAB 各数据子集、标注及附件可能适用单独的使用条款，具体请参阅对应的 README 或 Hugging Face 页面。
+
+PatentAgentBench（PAB）数据集及相关输出可能存在错误或遗漏，不构成法律意见。使用者在依赖这些材料之前须进行审查与验证，确保具备处理材料所需的权利，并遵守适用的许可证、法律与法规。使用 PAB 前请阅读[完整免责声明](DISCLAIMER.zh.md)。
 
 Copyright (c) 2026 PatSnap.

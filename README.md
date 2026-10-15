@@ -94,8 +94,10 @@ Follow the dataset links above for task instructions, schemas, and loading examp
 }
 ```
 
-## License
+## License and Disclaimer
 
-The repository license is [MIT](LICENSE). For dataset-specific licensing, see the relevant subset README or Hugging Face page.
+The code and project documentation in the PatentAgentBench (PAB) repository are licensed under the [MIT License](LICENSE). Individual PAB datasets, annotations, and attachments may have separate terms; see the relevant subset README or Hugging Face page.
+
+PatentAgentBench (PAB) datasets and related outputs may contain errors or omissions and do not constitute legal advice. Users must review and validate them before relying on them, ensure they have the necessary rights to process materials, and comply with applicable licenses, laws, and regulations. Read the [full disclaimer](DISCLAIMER.md) before using PAB.
 
 Copyright (c) 2026 PatSnap.
