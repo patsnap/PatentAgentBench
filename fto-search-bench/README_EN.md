@@ -77,7 +77,8 @@ application numbers after deduplication. For evaluation, deduplicate non-empty
    from real patent-litigation materials with coverage across target
    jurisdictions and IPC sections.
 2. **Input preparation:** Technical solutions from the scenarios were converted
-   into English technical descriptions suitable for retrieval.
+   into technical descriptions suitable for retrieval. The public data contains
+   30 Chinese and 30 English query texts.
 3. **Ground-truth preparation:** Annotators reviewed known risk patents and
    normalized their application numbers, jurisdictions, and available language
    metadata.
@@ -100,7 +101,7 @@ the file can be streamed without loading the entire dataset into memory.
 | Field | Type | Description |
 | --- | --- | --- |
 | `data_id` | string | Stable case identifier (UUID) |
-| `technical_text` | string | English technical description used as the retrieval query |
+| `technical_text` | string | Technical description used as the retrieval query; 30 Chinese and 30 English texts |
 | `related_patent_detail` | array[object] | Ground-truth list of known risk patents |
 | `ipc_main` | string | Main IPC section, from A to H |
 | `country` | string | Target jurisdiction, currently CN, US, or EP |
