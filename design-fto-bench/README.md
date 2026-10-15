@@ -1,5 +1,7 @@
 # PatSnap Design FTO Bench
 
+English | [中文](README.zh.md)
+
 PatSnap Design FTO Bench is a dataset for **design patent Freedom-To-Operate (FTO) image retrieval**. Each example contains a query image and a list of annotated target patent publication numbers. The `test` split contains 80 JSONL records in [`data/test.jsonl`](data/test.jsonl). The 80 PNG images are stored under [`asset/`](asset/) and referenced by `query_img_path`.
 
 ## Dataset Overview
