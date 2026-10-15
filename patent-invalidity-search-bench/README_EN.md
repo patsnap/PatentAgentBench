@@ -8,7 +8,7 @@ the ground truth.
 
 [简体中文](./README.md) · **English**
 
-[Download the public dataset](./invalid_search_benchmark_20260917_public.jsonl)
+[Download the public dataset](./data/test.jsonl)
 
 </div>
 
@@ -84,7 +84,7 @@ evidence sets.
 
 | File | Description |
 | --- | --- |
-| [`invalid_search_benchmark_20260917_public.jsonl`](./invalid_search_benchmark_20260917_public.jsonl) | 80 public benchmark cases, one JSON object per line |
+| [`data/test.jsonl`](./data/test.jsonl) | 80 public benchmark cases, one JSON object per line |
 | [`README.md`](./README.md) | Chinese documentation |
 | [`README_EN.md`](./README_EN.md) | English documentation |
 
@@ -167,7 +167,7 @@ placeholders.
 import json
 from pathlib import Path
 
-dataset_path = Path("invalid_search_benchmark_20260917_public.jsonl")
+dataset_path = Path("data/test.jsonl")
 
 with dataset_path.open(encoding="utf-8") as file:
     records = [json.loads(line) for line in file if line.strip()]

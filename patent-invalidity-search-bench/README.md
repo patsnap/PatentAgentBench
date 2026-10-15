@@ -7,7 +7,7 @@
 
 **简体中文** · [English](./README_EN.md)
 
-[下载公开数据集](./invalid_search_benchmark_20260917_public.jsonl)
+[下载公开数据集](./data/test.jsonl)
 
 </div>
 
@@ -80,7 +80,7 @@
 
 | 文件 | 说明 |
 | --- | --- |
-| [`invalid_search_benchmark_20260917_public.jsonl`](./invalid_search_benchmark_20260917_public.jsonl) | 80 条公开 Benchmark 数据，一行一个 JSON 对象 |
+| [`data/test.jsonl`](./data/test.jsonl) | 80 条公开 Benchmark 数据，一行一个 JSON 对象 |
 | [`README.md`](./README.md) | 中文介绍 |
 | [`README_EN.md`](./README_EN.md) | English documentation |
 
@@ -159,7 +159,7 @@
 import json
 from pathlib import Path
 
-dataset_path = Path("invalid_search_benchmark_20260917_public.jsonl")
+dataset_path = Path("data/test.jsonl")
 
 with dataset_path.open(encoding="utf-8") as file:
     records = [json.loads(line) for line in file if line.strip()]
