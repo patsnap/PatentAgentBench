@@ -105,7 +105,6 @@ file can be processed as a stream without loading the entire dataset into memory
 | `invalid_evdience_patent_role` | object | Evidence references grouped by primary, secondary, or other roles |
 | `invalid_evdience_patent_legal_basis` | object | Evidence references grouped by novelty, inventive step, or other legal grounds |
 | `claims` | string | Patent claims used as the retrieval input |
-| `is_public` | integer | Public-release flag; always 1 in the public file |
 
 > [!NOTE]
 > The spelling `evdience` is retained from the source data contract for downstream
@@ -148,8 +147,7 @@ placeholders.
     "新颖性": ["PATENT_A"],
     "创造性": ["PATENT_A", "PATENT_B"]
   },
-  "claims": "Claim text...",
-  "is_public": 1
+  "claims": "Claim text..."
 }
 ```
 
@@ -165,7 +163,6 @@ with dataset_path.open(encoding="utf-8") as file:
     records = [json.loads(line) for line in file if line.strip()]
 
 assert len(records) == 80
-assert all(record["is_public"] == 1 for record in records)
 
 first_case = records[0]
 query = first_case["claims"]

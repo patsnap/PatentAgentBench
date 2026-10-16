@@ -101,7 +101,6 @@
 | `invalid_evdience_patent_role` | object | 按主要、次要等角色组织的证据文献 |
 | `invalid_evdience_patent_legal_basis` | object | 按新颖性、创造性等依据组织的证据文献 |
 | `claims` | string | 用作检索输入的权利要求文本 |
-| `is_public` | integer | 公开标记；公开文件中均为 1 |
 
 > [!NOTE]
 > 字段名中的 `evdience` 沿用原始数据契约的拼写，以保持上下游兼容。读取数据时请
@@ -140,8 +139,7 @@
     "新颖性": ["PATENT_A"],
     "创造性": ["PATENT_A", "PATENT_B"]
   },
-  "claims": "权利要求文本……",
-  "is_public": 1
+  "claims": "权利要求文本……"
 }
 ```
 
@@ -157,7 +155,6 @@ with dataset_path.open(encoding="utf-8") as file:
     records = [json.loads(line) for line in file if line.strip()]
 
 assert len(records) == 80
-assert all(record["is_public"] == 1 for record in records)
 
 first_case = records[0]
 query = first_case["claims"]
