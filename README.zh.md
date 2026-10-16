@@ -90,7 +90,7 @@ CN：中国；US：美国；EP：欧洲专利局；EU：欧盟；WO：PCT 国际
   title  = {PatentAgentBench (PAB)},
   author = {Patsnap},
   year   = {2026},
-  url    = {https://huggingface.co/collections/PatSnap/patsnap-pab}
+  url    = {https://huggingface.co/collections/PatSnap/patentagentbench}
 }
 ```
 
