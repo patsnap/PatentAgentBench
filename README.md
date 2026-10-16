@@ -90,7 +90,7 @@ Follow the dataset links above for task instructions, schemas, and loading examp
   title  = {PatentAgentBench (PAB)},
   author = {Patsnap},
   year   = {2026},
-  url    = {https://huggingface.co/collections/PatSnap/patsnap-pab}
+  url    = {https://huggingface.co/collections/PatSnap/patentagentbench}
 }
 ```
 
