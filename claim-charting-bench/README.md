@@ -16,7 +16,7 @@ Claim Charting Bench 用于评测模型将目标专利权利要求拆解为技�
 | 技术特征标注项 | 1,360 |
 | 词级对应关系 | 3,614 |
 
-每条样本包含目标权利要求、目标段落、对比段落，以及按权利要求编号归属的专家标注。输入文本已直接写入 JSONL，无须访问原始路径或下载附加文件。
+每条样本包含目标权利要求、目标段落、对比段落，以及按权利要求编号归属的专家标注。输入文本已直接写入 JSONL，无须下载附加文件。
 
 ## 字段说明
 
@@ -28,11 +28,9 @@ Claim Charting Bench 用于评测模型将目标专利权利要求拆解为技�
 | `claim` | 字符串 | 目标权利要求文本 |
 | `target_paragraph` | 字符串 | 目标文本段落 |
 | `compare_paragraph` | 字符串 | 对比证据段落 |
-| `target_paragraph_path`、`compare_paragraph_path` | 字符串 | 来源系统中的路径元数据；仓库不提供这些路径对应的独立文件 |
 | `feature_res` | 对象数组 | 技术特征及对比标注，作为参考答案使用 |
-| `is_public` | 整数 | **样本级发布标记**；此文件中均为 `1` |
 
-`feature_res` 中每项都有 `claim_num`、`target_feature`、`compare_feature`、`words` 和另一个 `is_public`。其中 `words` 是由 `target_word`、`compare_word` 组成的对应关系列表。**特征级 `is_public` 是“对比证据是否公开该技术特征”的标注，不是样本的发布许可标记。** 此文件中该标注出现 `0`、`1`、`-1`、`2`；公开性二分类评测只应使用定义明确的 `0` 和 `1`，不要擅自把其余值映射为是或否。部分特征还带有 `differ`、`feature_num`、`feature_weight`、`reason`、`score` 字段；这些字段并非每项都有。
+`feature_res` 中每项都有 `claim_num`、`target_feature`、`compare_feature`、`words` 和 `is_public`。其中 `words` 是由 `target_word`、`compare_word` 组成的对应关系列表。**特征级 `is_public` 标注对比证据是否公开该技术特征。** 此文件中该标注出现 `0`、`1`、`-1`、`2`；公开性二分类评测只应使用定义明确的 `0` 和 `1`，不要擅自把其余值映射为是或否。部分特征还带有 `differ`、`feature_num`、`feature_weight`、`reason`、`score` 字段；这些字段并非每项都有。
 
 ## 读取与评测
 

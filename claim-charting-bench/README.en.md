@@ -16,7 +16,7 @@ The public test set is [`data/test.jsonl`](data/test.jsonl): **30 records**, one
 | Annotated feature items | 1,360 |
 | Word-level alignments | 3,614 |
 
-Each record contains a target claim, target and comparison passages, and expert annotations grouped by claim number. The text needed for the task is embedded in the JSONL file; no source-path access or additional asset download is required.
+Each record contains a target claim, target and comparison passages, and expert annotations grouped by claim number. The text needed for the task is embedded in the JSONL file; no additional asset download is required.
 
 ## Schema
 
@@ -28,11 +28,9 @@ Each record contains a target claim, target and comparison passages, and expert 
 | `claim` | string | Target claim text |
 | `target_paragraph` | string | Target passage |
 | `compare_paragraph` | string | Comparison evidence passage |
-| `target_paragraph_path`, `compare_paragraph_path` | string | Source-system path metadata; the referenced standalone files are not included in this repository |
 | `feature_res` | array of objects | Feature-level reference annotations |
-| `is_public` | integer | **Record-level release flag**; `1` for every record in this file |
 
-Every `feature_res` item contains `claim_num`, `target_feature`, `compare_feature`, `words`, and another `is_public`. Each `words` item pairs `target_word` with `compare_word`. **The feature-level `is_public` records whether the comparison evidence discloses that feature; it is not a release-permission flag.** Values in this file include `0`, `1`, `-1`, and `2`. Use only the defined `0` and `1` labels for binary disclosure evaluation; do not assume a meaning for the other codes. Some feature items also contain `differ`, `feature_num`, `feature_weight`, `reason`, and `score`; these fields are optional.
+Every `feature_res` item contains `claim_num`, `target_feature`, `compare_feature`, `words`, and `is_public`. Each `words` item pairs `target_word` with `compare_word`. **The feature-level `is_public` records whether the comparison evidence discloses that feature.** Values in this file include `0`, `1`, `-1`, and `2`. Use only the defined `0` and `1` labels for binary disclosure evaluation; do not assume a meaning for the other codes. Some feature items also contain `differ`, `feature_num`, `feature_weight`, `reason`, and `score`; these fields are optional.
 
 ## Loading and evaluation
 
