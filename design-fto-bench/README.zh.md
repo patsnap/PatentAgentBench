@@ -46,7 +46,6 @@ print(len(samples), image_path, sample["target_pns"])
 | `loc` | 字符串 | 洛迦诺分类的一级分类 |
 | `sub_loc` | 字符串 | 更具体的洛迦诺分类 |
 | `jurisdiction` | 字符串列表 | 法域代码（`["CN"]` 或 `["EU"]`） |
-| `is_public` | 整数 | 公开标记；本测试集均为 `1` |
 
 ## 引用
 

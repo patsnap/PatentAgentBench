@@ -44,7 +44,6 @@ The same dataset is available on [Hugging Face](https://huggingface.co/datasets/
 | `loc` | string | First-level Locarno classification |
 | `sub_loc` | string | More specific Locarno classification |
 | `jurisdiction` | list[string] | Jurisdiction codes (`["CN"]` or `["EU"]`) |
-| `is_public` | int64 | Public availability flag; `1` in this split |
 
 ## Citation
 
