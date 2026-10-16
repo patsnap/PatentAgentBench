@@ -10,7 +10,7 @@ PatentAgentBench evaluates large language models and AI agents on professional p
 
 **8 datasets · 1,311 test records · Chinese and English tasks · Text, image, and document inputs**
 
-[🤗 Hugging Face Dataset Collection](https://huggingface.co/collections/PatSnap/patsnap-pab)
+[🤗 Hugging Face Dataset Collection](https://huggingface.co/collections/PatSnap/patentagentbench)
 
 ## Datasets
 
