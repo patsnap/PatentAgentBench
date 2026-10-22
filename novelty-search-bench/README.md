@@ -53,6 +53,8 @@ dataset_info:
 
 # Patsnap Novelty Search Bench
 
+[简体中文](README.zh.md) | **English**
+
 This dataset contains 80 patent novelty search examples. Each example has a query patent publication number and publication numbers for examiner cited X type prior art. The examples include references cited for the query patent and for members of its patent family.
 
 ## Dataset overview
