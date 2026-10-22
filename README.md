@@ -8,7 +8,7 @@
 
 PatentAgentBench evaluates large language models and AI agents on professional patent tasks, including search, analysis, drafting, Office Action responses, and translation.
 
-**8 datasets · 1,311 test records · Chinese and English tasks · Text, image, and document inputs**
+**8 datasets · 473 test cases · Chinese and English tasks · Text, image, and document inputs**
 
 [🤗 Hugging Face Dataset Collection](https://huggingface.co/collections/PatSnap/patentagentbench)
 
@@ -22,26 +22,26 @@ PatentAgentBench evaluates large language models and AI agents on professional p
 | [Novelty Search](novelty-search-bench/) | 80 | Retrieve examiner-cited X-type prior art and its patent families | [🤗 View](https://huggingface.co/datasets/PatSnap/novelty-search-bench) |
 | [Patent Drafting](patent-drafting-bench/) | 60 | Draft claims, a specification, and necessary drawings from a technical disclosure | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-drafting-bench) |
 | [Patent Invalidity Search](patent-invalidity-search-bench/) | 80 | Retrieve evidence from real invalidation cases using patent claims | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-invalidity-search-bench) |
-| [Patent Translation](patent-translation-bench/) | 881 | Evaluate Chinese/English patent text translation | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-translation-bench) |
+| [Patent Translation](patent-translation-bench/) | 43 | Evaluate Chinese/English patent text translation | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-translation-bench) |
 | [Office Action Response (OAR)](oar-bench/) | 40 | Draft responses using Office Actions and case materials | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-oar-bench) |
-| **Total** | **1,311** | | |
+| **Total** | **473** | | |
 
 ## Data distributions
 
 ### Languages and jurisdictions
 
-Language counts are samples of task inputs or required outputs; translation counts describe bilingual pairs.
+Languages refer to task inputs or required outputs.
 
 | Dataset | Language | Jurisdiction |
 | --- | --- | --- |
-| Claim Charting | Chinese 15 / English 15 | CN / US / EP |
+| Claim Charting | Chinese / English | CN / US / EP |
 | Design FTO | Image input | CN / EU |
-| FTO Search | Chinese 30 / English 30 | CN / US / EP |
-| Novelty Search | Chinese 40 / English 40 | CN / US / EP / WO |
-| Patent Drafting | Chinese 31 / English 29 | CN / US / EP |
-| Patent Invalidity Search | Chinese 40 / English 40 | CN / US |
-| Patent Translation | Chinese/English pairs 854 / Chinese only 27 | CN / Not annotated |
-| Office Action Response | Chinese 13 / English 27 | CN / US / EP |
+| FTO Search | Chinese / English | CN / US / EP |
+| Novelty Search | Chinese / English | CN / US / EP / WO |
+| Patent Drafting | Chinese / English | CN / US / EP |
+| Patent Invalidity Search | Chinese / English | CN / US |
+| Patent Translation | Chinese / English | CN / US / EP / WO |
+| Office Action Response | Chinese / English | CN / US / EP |
 
 CN: China; US: United States; EP: European Patent Office; EU: European Union; WO: PCT international publication. Translation jurisdictions are identified from source patent publication numbers.
 

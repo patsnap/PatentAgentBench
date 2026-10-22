@@ -1,19 +1,20 @@
 # Patsnap Patent Translation Bench
 
-This benchmark contains 881 patent text examples for evaluating Chinese and
-English translation. It covers word, character, sentence, paragraph, and
+This benchmark covers 43 patents and provides 881 evaluation items for Chinese
+and English translation. It covers word, character, sentence, paragraph, and
 document text, with annotations for translation accuracy, terminology,
 patent writing conventions, hallucination, and omission.
 
 The dataset is distributed as one JSON object per line in
-[`data/test.jsonl`](data/test.jsonl). The same 881 examples are available in
+[`data/test.jsonl`](data/test.jsonl). The same 881 items are available in
 [Parquet format on Hugging Face](https://huggingface.co/datasets/PatSnap/patent-translation-bench).
 
 ## Dataset overview
 
 | Property | Value |
 |----------|-------|
-| Examples | 881 |
+| Patents | 43 |
+| Evaluation items | 881 |
 | Rows with Chinese and English text | 854 |
 | Rows with `content_en` equal to `Zero` | 27 |
 | IPC coverage | A–H, plus records without an IPC label |

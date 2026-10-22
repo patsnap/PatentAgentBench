@@ -8,9 +8,9 @@
 
 PatentAgentBench 用于评测大语言模型与 AI Agent 的专业专利任务能力，涵盖检索、分析、撰写、审查意见答复与翻译。
 
-**8 个数据集 · 1,311 条测试记录 · 中英文任务 · 文本、图像与文档输入**
+**8 个数据集 · 473 个测试案例 · 中英文任务 · 文本、图像与文档输入**
 
-[🤗 Hugging Face 数据集合集][(https://huggingface.co/collections/PatSnap/patentagentbench)]
+[🤗 Hugging Face 数据集合集](https://huggingface.co/collections/PatSnap/patentagentbench)
 
 ## 数据集一览
 
@@ -22,26 +22,26 @@ PatentAgentBench 用于评测大语言模型与 AI Agent 的专业专利任务�
 | [新颖性检索](novelty-search-bench/) | 80 | 检索审查员引用的 X 类现有技术及其同族 | [🤗 查看](https://huggingface.co/datasets/PatSnap/novelty-search-bench) |
 | [专利撰写](patent-drafting-bench/) | 60 | 根据技术交底书撰写权利要求、说明书及必要附图 | [🤗 查看](https://huggingface.co/datasets/PatSnap/patent-drafting-bench) |
 | [专利无效检索](patent-invalidity-search-bench/) | 80 | 根据权利要求检索真实无效案件中的证据 | [🤗 查看](https://huggingface.co/datasets/PatSnap/patent-invalidity-search-bench) |
-| [专利翻译](patent-translation-bench/) | 881 | 评测中英文专利文本翻译 | [🤗 查看](https://huggingface.co/datasets/PatSnap/patent-translation-bench) |
+| [专利翻译](patent-translation-bench/) | 43 | 评测中英文专利文本翻译 | [🤗 查看](https://huggingface.co/datasets/PatSnap/patent-translation-bench) |
 | [审查意见答复（OAR）](oar-bench/) | 40 | 根据审查意见及案件材料撰写答复 | [🤗 查看](https://huggingface.co/datasets/PatSnap/patent-oar-bench) |
-| **合计** | **1,311** | | |
+| **合计** | **473** | | |
 
 ## 数据分布
 
 ### 语言与司法辖区
 
-语言按样本数统计，指任务输入或要求的输出语言；翻译任务按双语配对统计。
+语言指任务输入或要求的输出语言。
 
 | 数据集 | 语言 | 司法辖区 |
 | --- | --- | --- |
-| 权利要求对比 | 中文 15 / 英文 15 | CN / US / EP |
+| 权利要求对比 | 中文 / 英文 | CN / US / EP |
 | 外观设计 FTO | 图像输入 | CN / EU |
-| FTO 检索 | 中文 30 / 英文 30 | CN / US / EP |
-| 新颖性检索 | 中文 40 / 英文 40 | CN / US / EP / WO |
-| 专利撰写 | 中文 31 / 英文 29 | CN / US / EP |
-| 专利无效检索 | 中文 40 / 英文 40 | CN / US |
-| 专利翻译 | 中英配对 854 / 仅中文 27 | CN / 未标注 |
-| 审查意见答复 | 中文 13 / 英文 27 | CN / US / EP |
+| FTO 检索 | 中文 / 英文 | CN / US / EP |
+| 新颖性检索 | 中文 / 英文 | CN / US / EP / WO |
+| 专利撰写 | 中文 / 英文 | CN / US / EP |
+| 专利无效检索 | 中文 / 英文 | CN / US |
+| 专利翻译 | 中文 / 英文 | CN / US / EP / WO |
+| 审查意见答复 | 中文 / 英文 | CN / US / EP |
 
 CN：中国；US：美国；EP：欧洲专利局；EU：欧盟；WO：PCT 国际公布。翻译任务的司法辖区以原始专利公开号为准。
 
