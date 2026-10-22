@@ -8,23 +8,24 @@
 
 PatentAgentBench evaluates large language models and AI agents on professional patent tasks, including search, analysis, drafting, Office Action responses, and translation.
 
-**8 datasets · 473 test cases · Chinese and English tasks · Text, image, and document inputs**
+**8 datasets · Chinese and English tasks · Text, image, and document inputs**
 
 [🤗 Hugging Face Dataset Collection](https://huggingface.co/collections/PatSnap/patentagentbench)
 
 ## Datasets
 
-| Dataset | Samples | Task | Hugging Face |
-| --- | ---: | --- | --- |
+| Dataset | Scale | Task | Hugging Face |
+| --- | --- | --- | --- |
 | [Claim Charting](claim-charting-bench/) | 30 | Decompose claims into features, align evidence, and judge disclosure | [🤗 View](https://huggingface.co/datasets/PatSnap/claim-charting-bench) |
 | [Design FTO](design-fto-bench/) | 80 | Retrieve design patents from product images | [🤗 View](https://huggingface.co/datasets/PatSnap/design-fto-bench) |
 | [FTO Search](fto-search-bench/) | 60 | Retrieve known risk patents from technical descriptions in a target jurisdiction | [🤗 View](https://huggingface.co/datasets/PatSnap/fto-search-bench) |
 | [Novelty Search](novelty-search-bench/) | 80 | Retrieve examiner-cited X-type prior art and its patent families | [🤗 View](https://huggingface.co/datasets/PatSnap/novelty-search-bench) |
 | [Patent Drafting](patent-drafting-bench/) | 60 | Draft claims, a specification, and necessary drawings from a technical disclosure | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-drafting-bench) |
 | [Patent Invalidity Search](patent-invalidity-search-bench/) | 80 | Retrieve evidence from real invalidation cases using patent claims | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-invalidity-search-bench) |
-| [Patent Translation](patent-translation-bench/) | 43 | Evaluate Chinese/English patent text translation | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-translation-bench) |
+| [Patent Translation](patent-translation-bench/) | 881 items; text volume ≈80 average-length patent documents | Evaluate Chinese/English patent text translation | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-translation-bench) |
 | [Office Action Response (OAR)](oar-bench/) | 40 | Draft responses using Office Actions and case materials | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-oar-bench) |
-| **Total** | **473** | | |
+
+Other dataset counts are test cases. The translation figure is an approximate text-volume equivalence plus an item count, so these values are not summed.
 
 ## Data distributions
 

@@ -8,23 +8,24 @@
 
 PatentAgentBench 用于评测大语言模型与 AI Agent 的专业专利任务能力，涵盖检索、分析、撰写、审查意见答复与翻译。
 
-**8 个数据集 · 473 个测试案例 · 中英文任务 · 文本、图像与文档输入**
+**8 个数据集 · 中英文任务 · 文本、图像与文档输入**
 
 [🤗 Hugging Face 数据集合集](https://huggingface.co/collections/PatSnap/patentagentbench)
 
 ## 数据集一览
 
-| 数据集 | 样本数 | 任务简介 | Hugging Face |
-| --- | ---: | --- | --- |
+| 数据集 | 规模 | 任务简介 | Hugging Face |
+| --- | --- | --- | --- |
 | [权利要求对比](claim-charting-bench/) | 30 | 拆解技术特征，与对比证据对齐并判断公开情况 | [🤗 查看](https://huggingface.co/datasets/PatSnap/claim-charting-bench) |
 | [外观设计 FTO](design-fto-bench/) | 80 | 根据产品图像检索外观设计专利 | [🤗 查看](https://huggingface.co/datasets/PatSnap/design-fto-bench) |
 | [FTO 检索](fto-search-bench/) | 60 | 根据技术描述检索目标司法辖区的已知风险专利 | [🤗 查看](https://huggingface.co/datasets/PatSnap/fto-search-bench) |
 | [新颖性检索](novelty-search-bench/) | 80 | 检索审查员引用的 X 类现有技术及其同族 | [🤗 查看](https://huggingface.co/datasets/PatSnap/novelty-search-bench) |
 | [专利撰写](patent-drafting-bench/) | 60 | 根据技术交底书撰写权利要求、说明书及必要附图 | [🤗 查看](https://huggingface.co/datasets/PatSnap/patent-drafting-bench) |
 | [专利无效检索](patent-invalidity-search-bench/) | 80 | 根据权利要求检索真实无效案件中的证据 | [🤗 查看](https://huggingface.co/datasets/PatSnap/patent-invalidity-search-bench) |
-| [专利翻译](patent-translation-bench/) | 43 | 评测中英文专利文本翻译 | [🤗 查看](https://huggingface.co/datasets/PatSnap/patent-translation-bench) |
+| [专利翻译](patent-translation-bench/) | 881 个评测 item；文本量约当 80 篇平均长度的专利文本 | 评测中英文专利文本翻译 | [🤗 查看](https://huggingface.co/datasets/PatSnap/patent-translation-bench) |
 | [审查意见答复（OAR）](oar-bench/) | 40 | 根据审查意见及案件材料撰写答复 | [🤗 查看](https://huggingface.co/datasets/PatSnap/patent-oar-bench) |
-| **合计** | **473** | | |
+
+其他数据集按测试案例计数；翻译数据分别提供文本量约当值与评测 item 数，单位不同，因此不合并求和。
 
 ## 数据分布
 

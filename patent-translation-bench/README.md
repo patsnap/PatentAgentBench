@@ -1,8 +1,10 @@
 # Patsnap Patent Translation Bench
 
-This benchmark covers 43 patents and provides 881 evaluation items for Chinese
-and English translation. It covers word, character, sentence, paragraph, and
-document text, with annotations for translation accuracy, terminology,
+This benchmark contains a text volume roughly equivalent to 80 average-length
+patent documents, organized into 881 evaluation items for Chinese and English
+translation. The document equivalence describes text volume, not the number
+of distinct patents. The items cover word, character, sentence, paragraph,
+and document text, with annotations for translation accuracy, terminology,
 patent writing conventions, hallucination, and omission.
 
 The dataset is distributed as one JSON object per line in
@@ -13,7 +15,7 @@ The dataset is distributed as one JSON object per line in
 
 | Property | Value |
 |----------|-------|
-| Patents | 43 |
+| Approximate text volume | Equivalent to 80 average-length patent documents |
 | Evaluation items | 881 |
 | Rows with Chinese and English text | 854 |
 | Rows with `content_en` equal to `Zero` | 27 |
