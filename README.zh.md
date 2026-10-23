@@ -1,9 +1,7 @@
 # PatentAgentBench (PAB)
 
 <p align="left">
-  <img src="assets/partner-logo.svg" alt="PatentBench" height="48">
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="assets/patsnap-logo.svg" alt="Patsnap" height="48">
+  <img src="assets/brand-logos.svg" alt="PatentBench and Patsnap" width="572">
 </p>
 
 [English](README.md) | **简体中文**
