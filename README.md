@@ -52,23 +52,23 @@ Claim Charting, FTO Search, Novelty Search, Patent Drafting, and Patent Invalidi
 
 ## Evaluation metrics and rubrics
 
-**Automatic metrics** are calculated against reference answers. **Rubrics** are scoring criteria assessed individually by human reviewers or LLM judges.
+**Rubrics** are scoring criteria assessed individually by human reviewers or LLM judges.
 
-| Dataset | Automatic metrics or reference annotations | Rubric entries |
+| Dataset | Scoring approach | Rubric entries |
 | --- | --- | ---: |
 | Patent Drafting | Weighted rubric scoring | 977 |
-| Office Action Response | Automatic Accuracy and F1 metrics combined with rubric scoring | 612 |
-| **Total** | | **1,589** |
+| Office Action Response | 19 common Judge-scored criteria per case | 760 |
+| **Total** | | **1,737** |
 
 ### Rubric breakdown
 
 | Dataset | Common criteria | Case-specific criteria | Total |
 | --- | ---: | ---: | ---: |
 | Patent Drafting | 900 | 77 | 977 |
-| Office Action Response | 600 | 12 | 612 |
-| **Total** | **1,500** | **89** | **1,589** |
+| Office Action Response | 760 | 0 | 760 |
+| **Total** | **1,660** | **77** | **1,737** |
 
-Counts are criterion entries across cases, including repeated common criteria. OAR also contains **200 automatic metric definitions**, excluded from the rubric total. See each dataset's documentation for score levels, weights, and applicability rules.
+Counts are criterion entries across cases, including repeated common criteria. This OAR release has no automatic or case-specific criteria. See each dataset's documentation for score levels, weights, and applicability rules.
 
 ## Directory structure
 
