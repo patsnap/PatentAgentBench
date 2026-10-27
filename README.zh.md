@@ -10,7 +10,7 @@ PatentAgentBench 用于评测大语言模型与 AI Agent 的专业专利任务�
 
 **8 个数据集 · 中英文任务 · 文本、图像与文档输入**
 
-[论文（arXiv PDF）](https://arxiv.org/pdf/2610.35031) | [🤗 Hugging Face 数据集合集](https://huggingface.co/collections/PatSnap/patentagentbench)
+[网站](https://www.patentbench.ai/) | [论文（arXiv PDF）](https://arxiv.org/pdf/2610.35031) | [🤗 Hugging Face 数据集合集](https://huggingface.co/collections/PatSnap/patentagentbench)
 
 ## 数据集一览
 
