@@ -22,10 +22,10 @@ PatentAgentBench 用于评测大语言模型与 AI Agent 的专业专利任务�
 | [新颖性检索](novelty-search-bench/README.zh.md) | 80 | 检索审查员引用的 X 类现有技术及其同族 | [🤗 查看](https://huggingface.co/datasets/PatSnap/novelty-search-bench) |
 | [专利撰写](patent-drafting-bench/) | 60 | 根据技术交底书撰写权利要求、说明书及必要附图 | [🤗 查看](https://huggingface.co/datasets/PatSnap/patent-drafting-bench) |
 | [专利无效检索](patent-invalidity-search-bench/) | 80 | 根据权利要求检索真实无效案件中的证据 | [🤗 查看](https://huggingface.co/datasets/PatSnap/patent-invalidity-search-bench) |
-| [专利翻译](patent-translation-bench/) | 881 个评测 item；文本量约当 80 篇平均长度的专利文本 | 评测中英文专利文本翻译 | [🤗 查看](https://huggingface.co/datasets/PatSnap/patent-translation-bench) |
+| [专利翻译](patent-translation-bench/) | 80 | 评测中英文专利文本翻译 | [🤗 查看](https://huggingface.co/datasets/PatSnap/patent-translation-bench) |
 | [审查意见答复（OAR）](oar-bench/) | 40 | 根据审查意见及案件材料撰写答复 | [🤗 查看](https://huggingface.co/datasets/PatSnap/patent-oar-bench) |
 
-其他数据集按测试案例计数；翻译数据分别提供文本量约当值与评测 item 数，单位不同，因此不合并求和。
+数据集规模按测试案例计数。专利翻译包含 80 条数据，共 881 个评测 item。
 
 ## 数据分布
 
@@ -52,23 +52,21 @@ CN：中国；US：美国；EP：欧洲专利局；EU：欧盟；WO：PCT 国际
 
 ## 评测指标与 Rubric
 
-**Rubric** 使用评分规则，由人工或 LLM Judge 逐项评审。
+**Rubric** 定义人工或 LLM Judge 的评分规则。专利撰写按跨案例的指标项累计计数；OAR 按共用的评分档位标准计数。
 
-| 数据集 | 评分方式 | Rubric 条目数 |
+| 数据集 | 评分方式 | Rubric 数量 |
 | --- | --- | ---: |
-| 专利撰写 | 按 Rubric 加权评分 | 977 |
-| 审查意见答复 | 每案 19 项由 Judge 评分的通用指标 | 760 |
-| **合计** | | **1,737** |
+| 专利撰写 | 按 Rubric 加权评分 | 跨案例累计 977 个指标项 |
+| 审查意见答复 | 19 项共用 Judge 指标 × 3 档评分标准 | 57 条共用评分标准 |
 
 ### Rubric 构成
 
-| 数据集 | 通用规则 | 案例特定规则 | 合计 |
-| --- | ---: | ---: | ---: |
-| 专利撰写 | 900 | 77 | 977 |
-| 审查意见答复 | 760 | 0 | 760 |
-| **合计** | **1,660** | **77** | **1,737** |
+| 数据集 | 通用规则 | 案例特定规则 | 合计 | 计数单位 |
+| --- | ---: | ---: | ---: | --- |
+| 专利撰写 | 900 | 77 | 977 | 跨案例累计的指标项 |
+| 审查意见答复 | 57 | 0 | 57 | 共用的评分档位标准 |
 
-以上按各案例中的规则条目累计，包含跨案例重复的通用规则。本版 OAR 不包含自动指标或案例专属指标。具体评分档位、权重与适用条件见各子集文档。
+专利撰写的数量包含跨案例重复的通用指标项。OAR 的 57 条 rubrics 为 19 项通用指标各自的 0、0.5、1 三档评分标准，全部 40 个案例共用，不再乘以案例数。两者计数单位不同，不合并求和。本版 OAR 不包含自动指标或案例专属指标。具体权重与适用条件见各子集文档。
 
 ## 目录结构
 

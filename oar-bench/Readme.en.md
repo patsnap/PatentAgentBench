@@ -29,7 +29,7 @@ Each record begins with `field_values`. Its top-level fields are:
 | `field_values` | Case identity, source texts, structured reference data, task configuration, and document metadata |
 | `scoring_policy` | Score levels, applicability rules, weight allocation, and policies for avoiding duplicate penalties |
 | `layer_weights` | Always `{"common": 1.0}`; only the common scoring layer is used |
-| `metrics` | The 19 shared common scoring criteria |
+| `metrics` | 19 shared common scoring criteria, each with 3 score-level descriptions, totaling 57 rubrics |
 
 Identity fields are nested inside `field_values`; there are no top-level `id`, `apno`, `country`, `schema_version`, or `case_id` fields.
 
@@ -78,7 +78,7 @@ For example, Chinese case `349` corresponds to `assets/OAR-349.pdf`. No external
 
 ## Scoring Criteria and References
 
-Each case contains 19 common Judge-scored criteria, giving 760 metric entries across 40 cases.
+OAR uses 57 shared rubrics: 19 common Judge-scored criteria, each defining three score-level descriptions (0, 0.5, and 1) in `levels` (19 × 3 = 57). All 40 cases reuse this rubric set; the rubric count does not multiply it by the number of cases. The JSONL stores 760 metric records (40 × 19), containing 2,280 score-level records (40 × 57).
 
 | Group | Criteria | Common budget | Allocation within group |
 |---|---|---:|---|

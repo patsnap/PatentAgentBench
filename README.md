@@ -22,10 +22,10 @@ PatentAgentBench evaluates large language models and AI agents on professional p
 | [Novelty Search](novelty-search-bench/) | 80 | Retrieve examiner-cited X-type prior art and its patent families | [🤗 View](https://huggingface.co/datasets/PatSnap/novelty-search-bench) |
 | [Patent Drafting](patent-drafting-bench/) | 60 | Draft claims, a specification, and necessary drawings from a technical disclosure | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-drafting-bench) |
 | [Patent Invalidity Search](patent-invalidity-search-bench/) | 80 | Retrieve evidence from real invalidation cases using patent claims | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-invalidity-search-bench) |
-| [Patent Translation](patent-translation-bench/) | 881 items; text volume ≈80 average-length patent documents | Evaluate Chinese/English patent text translation | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-translation-bench) |
+| [Patent Translation](patent-translation-bench/) | 80 | Evaluate Chinese/English patent text translation | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-translation-bench) |
 | [Office Action Response (OAR)](oar-bench/) | 40 | Draft responses using Office Actions and case materials | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-oar-bench) |
 
-Other dataset counts are test cases. The translation figure is an approximate text-volume equivalence plus an item count, so these values are not summed.
+Dataset scales count test cases. Patent Translation contains 80 samples comprising 881 evaluation items.
 
 ## Data distributions
 
@@ -52,23 +52,21 @@ Claim Charting, FTO Search, Novelty Search, Patent Drafting, and Patent Invalidi
 
 ## Evaluation metrics and rubrics
 
-**Rubrics** are scoring criteria assessed individually by human reviewers or LLM judges.
+**Rubrics** define how human reviewers or LLM judges assess outputs. Patent Drafting counts criterion entries across cases; OAR counts shared score-level descriptions.
 
-| Dataset | Scoring approach | Rubric entries |
+| Dataset | Scoring approach | Rubric count |
 | --- | --- | ---: |
-| Patent Drafting | Weighted rubric scoring | 977 |
-| Office Action Response | 19 common Judge-scored criteria per case | 760 |
-| **Total** | | **1,737** |
+| Patent Drafting | Weighted rubric scoring | 977 criterion entries across cases |
+| Office Action Response | 19 shared Judge-scored criteria × 3 score levels | 57 shared score-level descriptions |
 
 ### Rubric breakdown
 
-| Dataset | Common criteria | Case-specific criteria | Total |
-| --- | ---: | ---: | ---: |
-| Patent Drafting | 900 | 77 | 977 |
-| Office Action Response | 760 | 0 | 760 |
-| **Total** | **1,660** | **77** | **1,737** |
+| Dataset | Common | Case-specific | Total | Counting unit |
+| --- | ---: | ---: | ---: | --- |
+| Patent Drafting | 900 | 77 | 977 | Criterion entries across cases |
+| Office Action Response | 57 | 0 | 57 | Shared score-level descriptions |
 
-Counts are criterion entries across cases, including repeated common criteria. This OAR release has no automatic or case-specific criteria. See each dataset's documentation for score levels, weights, and applicability rules.
+Patent Drafting counts include common criteria repeated across cases. OAR's 57 rubrics comprise 19 common criteria with three score-level descriptions each (0, 0.5, and 1), reused across all 40 cases without multiplying the count by the number of cases. These counts use different units and are not summed. This OAR release has no automatic or case-specific criteria. See each dataset's documentation for weights and applicability rules.
 
 ## Directory structure
 
