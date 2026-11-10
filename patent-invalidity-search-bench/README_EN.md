@@ -101,26 +101,25 @@ file can be processed as a stream without loading the entire dataset into memory
 | `apdt` | integer | Application date encoded as `YYYYMMDD` |
 | `final_outcome` | string | Final outcome of the invalidation case |
 | `patent_info` | object | Challenged claims and claims ultimately found unpatentable |
-| `invalid_evdience_patent` | array[string] | Complete evidence-reference ground truth |
-| `invalid_evdience_patent_role` | object | Evidence references grouped by primary, secondary, or other roles |
-| `invalid_evdience_patent_legal_basis` | object | Evidence references grouped by novelty, inventive step, or other legal grounds |
+| `invalid_evidence_patent` | array[string] | Complete evidence-reference ground truth |
+| `invalid_evidence_patent_role` | object | Evidence references grouped by primary, secondary, or other roles |
+| `invalid_evidence_patent_legal_basis` | object | Evidence references grouped by novelty, inventive step, or other legal grounds |
 | `claims` | string | Patent claims used as the retrieval input |
 
 > [!NOTE]
-> The spelling `evdience` is retained from the source data contract for downstream
-> compatibility. Consumers should use the field names as published rather than
-> silently renaming them to `evidence`.
+> The three invalidity-evidence fields now use the `evidence` spelling. Update
+> code that reads earlier dataset versions accordingly.
 
 ### Important Nested Fields
 
 - `patent_info.challenged_claims`: IDs of the challenged claims.
 - `patent_info.final_unpatentable_claims`: IDs of the claims ultimately found
   unpatentable.
-- `invalid_evdience_patent_role.primary_reference`: core-reference ground truth.
-- `invalid_evdience_patent_role.secondary_reference`: secondary evidence
+- `invalid_evidence_patent_role.primary_reference`: core-reference ground truth.
+- `invalid_evidence_patent_role.secondary_reference`: secondary evidence
   references.
-- `invalid_evdience_patent_legal_basis.新颖性`: references used for novelty.
-- `invalid_evdience_patent_legal_basis.创造性`: references used for inventive step.
+- `invalid_evidence_patent_legal_basis.新颖性`: references used for novelty.
+- `invalid_evidence_patent_legal_basis.创造性`: references used for inventive step.
 
 ## Example Record
 
@@ -138,12 +137,12 @@ placeholders.
     "challenged_claims": [1, 2, 3],
     "final_unpatentable_claims": [1, 2, 3]
   },
-  "invalid_evdience_patent": ["PATENT_A", "PATENT_B"],
-  "invalid_evdience_patent_role": {
+  "invalid_evidence_patent": ["PATENT_A", "PATENT_B"],
+  "invalid_evidence_patent_role": {
     "primary_reference": ["PATENT_A"],
     "secondary_reference": ["PATENT_B"]
   },
-  "invalid_evdience_patent_legal_basis": {
+  "invalid_evidence_patent_legal_basis": {
     "新颖性": ["PATENT_A"],
     "创造性": ["PATENT_A", "PATENT_B"]
   },
@@ -166,9 +165,9 @@ assert len(records) == 80
 
 first_case = records[0]
 query = first_case["claims"]
-all_ground_truth = set(first_case["invalid_evdience_patent"])
+all_ground_truth = set(first_case["invalid_evidence_patent"])
 core_ground_truth = set(
-    first_case["invalid_evdience_patent_role"].get("primary_reference", [])
+    first_case["invalid_evidence_patent_role"].get("primary_reference", [])
 )
 
 print(query[:100])
@@ -181,8 +180,8 @@ print(core_ground_truth)
 For case `q`, define:
 
 - the core-reference set `Cq` as
-  `invalid_evdience_patent_role.primary_reference`;
-- the complete-reference set `Aq` as `invalid_evdience_patent`;
+  `invalid_evidence_patent_role.primary_reference`;
+- the complete-reference set `Aq` as `invalid_evidence_patent`;
 - the system's ranked, deduplicated result list as `Rq`.
 
 Compute the following metrics for both core and complete references at Top 5 and

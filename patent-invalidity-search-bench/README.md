@@ -97,23 +97,22 @@
 | `apdt` | integer | 申请日，格式为 `YYYYMMDD` |
 | `final_outcome` | string | 无效案件最终结果 |
 | `patent_info` | object | 被挑战权利要求和最终无效权利要求 |
-| `invalid_evdience_patent` | array[string] | 全部证据文献标准答案 |
-| `invalid_evdience_patent_role` | object | 按主要、次要等角色组织的证据文献 |
-| `invalid_evdience_patent_legal_basis` | object | 按新颖性、创造性等依据组织的证据文献 |
+| `invalid_evidence_patent` | array[string] | 全部证据文献标准答案 |
+| `invalid_evidence_patent_role` | object | 按主要、次要等角色组织的证据文献 |
+| `invalid_evidence_patent_legal_basis` | object | 按新颖性、创造性等依据组织的证据文献 |
 | `claims` | string | 用作检索输入的权利要求文本 |
 
 > [!NOTE]
-> 字段名中的 `evdience` 沿用原始数据契约的拼写，以保持上下游兼容。读取数据时请
-> 使用原字段名，不要直接改为 `evidence`。
+> 三个无效证据字段已统一采用 `evidence` 拼写。使用旧版数据的读取代码需同步更新字段名。
 
 ### 关键嵌套字段
 
 - `patent_info.challenged_claims`：被挑战的权利要求编号。
 - `patent_info.final_unpatentable_claims`：最终被认定无效的权利要求编号。
-- `invalid_evdience_patent_role.primary_reference`：核心文献标准答案。
-- `invalid_evdience_patent_role.secondary_reference`：次要证据文献。
-- `invalid_evdience_patent_legal_basis.新颖性`：用于新颖性判断的文献。
-- `invalid_evdience_patent_legal_basis.创造性`：用于创造性判断的文献。
+- `invalid_evidence_patent_role.primary_reference`：核心文献标准答案。
+- `invalid_evidence_patent_role.secondary_reference`：次要证据文献。
+- `invalid_evidence_patent_legal_basis.新颖性`：用于新颖性判断的文献。
+- `invalid_evidence_patent_legal_basis.创造性`：用于创造性判断的文献。
 
 ## 记录示例
 
@@ -130,12 +129,12 @@
     "challenged_claims": [1, 2, 3],
     "final_unpatentable_claims": [1, 2, 3]
   },
-  "invalid_evdience_patent": ["PATENT_A", "PATENT_B"],
-  "invalid_evdience_patent_role": {
+  "invalid_evidence_patent": ["PATENT_A", "PATENT_B"],
+  "invalid_evidence_patent_role": {
     "primary_reference": ["PATENT_A"],
     "secondary_reference": ["PATENT_B"]
   },
-  "invalid_evdience_patent_legal_basis": {
+  "invalid_evidence_patent_legal_basis": {
     "新颖性": ["PATENT_A"],
     "创造性": ["PATENT_A", "PATENT_B"]
   },
@@ -158,9 +157,9 @@ assert len(records) == 80
 
 first_case = records[0]
 query = first_case["claims"]
-all_ground_truth = set(first_case["invalid_evdience_patent"])
+all_ground_truth = set(first_case["invalid_evidence_patent"])
 core_ground_truth = set(
-    first_case["invalid_evdience_patent_role"].get("primary_reference", [])
+    first_case["invalid_evidence_patent_role"].get("primary_reference", [])
 )
 
 print(query[:100])
@@ -172,8 +171,8 @@ print(core_ground_truth)
 
 对于样本 `q`，定义：
 
-- 核心文献集合 `Cq`：`invalid_evdience_patent_role.primary_reference`；
-- 全部文献集合 `Aq`：`invalid_evdience_patent`；
+- 核心文献集合 `Cq`：`invalid_evidence_patent_role.primary_reference`；
+- 全部文献集合 `Aq`：`invalid_evidence_patent`；
 - 系统按相关性排序的去重结果列表 `Rq`。
 
 建议分别在 Top 5 和全量返回列表上，对核心文献与全部文献计算以下指标：
