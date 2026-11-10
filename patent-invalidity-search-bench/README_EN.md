@@ -66,9 +66,9 @@ evidence sets.
 
 | Final outcome | Cases | Share |
 | --- | ---: | ---: |
-| All claims invalid | 67 | 83.75% |
-| Partially invalid | 9 | 11.25% |
-| All claims invalid after amendment | 4 | 5.00% |
+| `all_claims_invalid` (all claims invalid) | 67 | 83.75% |
+| `partially_invalid` (partially invalid) | 9 | 11.25% |
+| `all_claims_invalid_after_amendment` (all claims invalid after amendment) | 4 | 5.00% |
 
 ## Dataset Construction
 
@@ -99,16 +99,17 @@ file can be processed as a stream without loading the entire dataset into memory
 | `ipc_main` | string | Main IPC section, from A to H |
 | `country` | string | Jurisdiction code, currently CN or US |
 | `apdt` | integer | Application date encoded as `YYYYMMDD` |
-| `final_outcome` | string | Final outcome of the invalidation case |
+| `final_outcome` | string | Final outcome of the invalidation case; values listed above |
 | `patent_info` | object | Challenged claims and claims ultimately found unpatentable |
 | `invalid_evidence_patent` | array[string] | Complete evidence-reference ground truth |
 | `invalid_evidence_patent_role` | object | Evidence references grouped by primary, secondary, or other roles |
-| `invalid_evidence_patent_legal_basis` | object | Evidence references grouped by novelty, inventive step, or other legal grounds |
+| `invalid_evidence_patent_legal_basis` | object | Evidence references grouped under `novelty` and `inventive_step` keys |
 | `claims` | string | Patent claims used as the retrieval input |
 
 > [!NOTE]
-> The three invalidity-evidence fields now use the `evidence` spelling. Update
-> code that reads earlier dataset versions accordingly.
+> The three invalidity-evidence fields use the `evidence` spelling.
+> `final_outcome` values and legal-ground keys now use English enums; update older
+> dataset readers accordingly.
 
 ### Important Nested Fields
 
@@ -118,8 +119,8 @@ file can be processed as a stream without loading the entire dataset into memory
 - `invalid_evidence_patent_role.primary_reference`: core-reference ground truth.
 - `invalid_evidence_patent_role.secondary_reference`: secondary evidence
   references.
-- `invalid_evidence_patent_legal_basis.新颖性`: references used for novelty.
-- `invalid_evidence_patent_legal_basis.创造性`: references used for inventive step.
+- `invalid_evidence_patent_legal_basis.novelty`: references used for novelty.
+- `invalid_evidence_patent_legal_basis.inventive_step`: references used for inventive step.
 
 ## Example Record
 
@@ -132,7 +133,7 @@ placeholders.
   "ipc_main": "E",
   "country": "CN",
   "apdt": 20101225,
-  "final_outcome": "全部无效",
+  "final_outcome": "all_claims_invalid",
   "patent_info": {
     "challenged_claims": [1, 2, 3],
     "final_unpatentable_claims": [1, 2, 3]
@@ -143,8 +144,8 @@ placeholders.
     "secondary_reference": ["PATENT_B"]
   },
   "invalid_evidence_patent_legal_basis": {
-    "新颖性": ["PATENT_A"],
-    "创造性": ["PATENT_A", "PATENT_B"]
+    "novelty": ["PATENT_A"],
+    "inventive_step": ["PATENT_A", "PATENT_B"]
   },
   "claims": "Claim text..."
 }

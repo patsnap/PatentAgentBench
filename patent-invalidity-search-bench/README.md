@@ -63,9 +63,9 @@
 
 | 最终结果 | 样本数 | 占比 |
 | --- | ---: | ---: |
-| 全部无效 | 67 | 83.75% |
-| 部分无效 | 9 | 11.25% |
-| 权利要求修改后全部无效 | 4 | 5.00% |
+| `all_claims_invalid`（全部无效） | 67 | 83.75% |
+| `partially_invalid`（部分无效） | 9 | 11.25% |
+| `all_claims_invalid_after_amendment`（权利要求修改后全部无效） | 4 | 5.00% |
 
 ## 数据集构建方法
 
@@ -95,15 +95,15 @@
 | `ipc_main` | string | IPC 主分类部，取值为 A–H |
 | `country` | string | 国家或地区代码，当前为 CN 或 US |
 | `apdt` | integer | 申请日，格式为 `YYYYMMDD` |
-| `final_outcome` | string | 无效案件最终结果 |
+| `final_outcome` | string | 无效案件最终结果，取值见上表 |
 | `patent_info` | object | 被挑战权利要求和最终无效权利要求 |
 | `invalid_evidence_patent` | array[string] | 全部证据文献标准答案 |
 | `invalid_evidence_patent_role` | object | 按主要、次要等角色组织的证据文献 |
-| `invalid_evidence_patent_legal_basis` | object | 按新颖性、创造性等依据组织的证据文献 |
+| `invalid_evidence_patent_legal_basis` | object | 按 `novelty`、`inventive_step` 键组织的证据文献 |
 | `claims` | string | 用作检索输入的权利要求文本 |
 
 > [!NOTE]
-> 三个无效证据字段已统一采用 `evidence` 拼写。使用旧版数据的读取代码需同步更新字段名。
+> 三个无效证据字段已统一采用 `evidence` 拼写。`final_outcome` 的取值和法律依据键现使用英文枚举；旧版读取代码需同步更新。
 
 ### 关键嵌套字段
 
@@ -111,8 +111,8 @@
 - `patent_info.final_unpatentable_claims`：最终被认定无效的权利要求编号。
 - `invalid_evidence_patent_role.primary_reference`：核心文献标准答案。
 - `invalid_evidence_patent_role.secondary_reference`：次要证据文献。
-- `invalid_evidence_patent_legal_basis.新颖性`：用于新颖性判断的文献。
-- `invalid_evidence_patent_legal_basis.创造性`：用于创造性判断的文献。
+- `invalid_evidence_patent_legal_basis.novelty`：用于新颖性判断的文献。
+- `invalid_evidence_patent_legal_basis.inventive_step`：用于创造性判断的文献。
 
 ## 记录示例
 
@@ -124,7 +124,7 @@
   "ipc_main": "E",
   "country": "CN",
   "apdt": 20101225,
-  "final_outcome": "全部无效",
+  "final_outcome": "all_claims_invalid",
   "patent_info": {
     "challenged_claims": [1, 2, 3],
     "final_unpatentable_claims": [1, 2, 3]
@@ -135,8 +135,8 @@
     "secondary_reference": ["PATENT_B"]
   },
   "invalid_evidence_patent_legal_basis": {
-    "新颖性": ["PATENT_A"],
-    "创造性": ["PATENT_A", "PATENT_B"]
+    "novelty": ["PATENT_A"],
+    "inventive_step": ["PATENT_A", "PATENT_B"]
   },
   "claims": "权利要求文本……"
 }
