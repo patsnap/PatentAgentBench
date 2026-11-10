@@ -41,10 +41,10 @@ risk-patent application numbers.
 | Public cases | 60 |
 | Jurisdictions | 3 (CN, US, and EP) |
 | IPC sections | 8 (A–H) |
-| Risk-patent entries | 95 |
+| Risk-patent entries | 84 |
 | Unique risk-patent application numbers | 81 |
-| Average risk-patent entries per case | 1.58 |
-| Cases with multiple risk-patent entries | 24 (40.0%) |
+| Average risk-patent entries per case | 1.40 |
+| Cases with multiple risk-patent entries | 13 (21.7%) |
 
 ### Jurisdiction Distribution
 
@@ -64,13 +64,13 @@ risk-patent application numbers.
 
 | Number of entries | 1 | 2 | 3 | 4 | 5+ |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Cases | 36 | 19 | 1 | 2 | 2 |
+| Cases | 47 | 8 | 1 | 2 | 2 |
 
-Within each case, `related_patent_detail` is deduplicated by the
-(`lang`, `country`, `apno`) tuple, retaining the first occurrence. Records
-sharing an application number but differing in country or language metadata
-remain distinct. For application-number retrieval metrics, deduplicate
-non-empty `apno` values within each case.
+For reference patents, `lang` is normalized by patent `country`: CN to CN
+and EP to EN; all current US records are EN. Within each case,
+`related_patent_detail` is then deduplicated by the (`lang`, `country`, `apno`)
+tuple, retaining the first occurrence. For application-number retrieval
+metrics, deduplicate non-empty `apno` values within each case.
 
 ## Dataset Construction
 
@@ -112,12 +112,11 @@ the file can be streamed without loading the entire dataset into memory.
 | Field | Type | Description |
 | --- | --- | --- |
 | `country` | string | Jurisdiction code of the risk patent |
-| `lang` | string \| null | Publication-language code; `null` when unavailable |
+| `lang` | string | Normalized evaluation-language code: CN for CN, EN for EP and current US records |
 | `apno` | string | Risk-patent application number used for evaluation matching |
 
-All 95 public risk-patent entries have non-empty `country` and `apno` values.
-Eight historical entries have a `null` `lang`; missing language metadata does not
-affect application-number-based retrieval evaluation.
+All 84 public risk-patent entries have non-empty `country`, `lang`, and
+`apno` values.
 
 ## Example Record
 
