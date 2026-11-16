@@ -41,7 +41,7 @@ risk-patent application numbers.
 | Public cases | 60 |
 | Jurisdictions | 3 (CN, US, and EP) |
 | IPC sections | 8 (A–H) |
-| Risk-patent entries | 84 |
+| Risk-patent entries | 123 |
 | Unique risk-patent application numbers | 81 |
 | Average risk-patent entries per case | 1.40 |
 | Cases with multiple risk-patent entries | 13 (21.7%) |
@@ -115,7 +115,7 @@ the file can be streamed without loading the entire dataset into memory.
 | `lang` | string | Normalized evaluation-language code: CN for CN, EN for EP and current US records |
 | `apno` | string | Risk-patent application number used for evaluation matching |
 
-All 84 public risk-patent entries have non-empty `country`, `lang`, and
+All 123 public risk-patent entries have non-empty `country`, `lang`, and
 `apno` values.
 
 ## Example Record
