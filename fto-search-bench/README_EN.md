@@ -42,9 +42,9 @@ risk-patent application numbers.
 | Jurisdictions | 3 (CN, US, and EP) |
 | IPC sections | 8 (A–H) |
 | Risk-patent entries | 123 |
-| Unique risk-patent application numbers | 81 |
-| Average risk-patent entries per case | 1.40 |
-| Cases with multiple risk-patent entries | 13 (21.7%) |
+| Unique risk-patent application numbers | 120 |
+| Average risk-patent entries per case | 2.05 |
+| Cases with multiple risk-patent entries | 31 (51.7%) |
 
 ### Jurisdiction Distribution
 
