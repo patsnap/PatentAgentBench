@@ -28,7 +28,6 @@ annotations.
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `pn` | string | Patent publication number; `Zero` if unavailable |
 | `ipc` | string | IPC section A–H; `Zero` if unavailable |
 | `content_cn` | string | Chinese text |
 | `content_en` | string | English text; `Zero` if unavailable |
