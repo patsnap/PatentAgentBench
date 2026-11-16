@@ -64,7 +64,7 @@ risk-patent application numbers.
 
 | Number of entries | 1 | 2 | 3 | 4 | 5+ |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Cases | 47 | 8 | 1 | 2 | 2 |
+| Cases | 29 | 17 | 6 | 2 | 6 |
 
 For reference patents, `lang` is normalized by patent `country`: CN to CN
 and EP to EN; all current US records are EN. Within each case,
