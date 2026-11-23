@@ -2,7 +2,7 @@
 
 [English](README.md) | **简体中文**
 
-本数据集包含 80 条专利新颖性检索样本。每条样本提供一件查询专利的公开号，以及审查员引用的 X 类现有技术的公开号。数据同时包含针对查询专利及其同族成员的引证信息。
+本数据集包含 80 条专利新颖性检索样本。每条样本提供评测检索时输入的技术方案文本，以及审查员引用的 X 类现有技术的公开号。数据同时包含针对对应专利及其同族成员的引证信息。
 
 ## 数据概览
 
@@ -23,14 +23,14 @@ from datasets import load_dataset
 
 test = load_dataset("PatSnap/novelty-search-bench", split="test")
 print(len(test))  # 80
-print(test[0]["pn"], test[0]["pn_x"])
+print(test[0]["tech_solution"], test[0]["pn_x"])
 ```
 
 ## 字段说明
 
 | 字段 | 类型 | 含义 |
 | --- | --- | --- |
-| `pn` | string | 查询专利公开号 |
+| `tech_solution` | string | 评测检索时输入的技术方案文本 |
 | `apdt` | int64 | 申请日，格式为 `YYYYMMDD` |
 | `ipc` | list[string] | IPC 分类号 |
 | `ipc_main` | string | 主要 IPC 部类 |
@@ -42,7 +42,7 @@ print(test[0]["pn"], test[0]["pn_x"])
 | `pn_family_x` | list[string] | 查询专利同族成员的 X 类引证文献公开号 |
 | `pn_family_x_family` | list[string] | `pn_family_x` 所对应专利同族的公开号 |
 
-`pn_x` 和 `pn_family_x` 记录被引用文献的公开号；对应的 `*_family` 字段记录其专利同族的公开号。数据不包含查询专利的技术方案文本。
+`tech_solution` 记录检索输入文本。`pn_x` 和 `pn_family_x` 记录被引用文献的公开号；对应的 `*_family` 字段记录其专利同族的公开号。
 
 ## 数据范围
 

@@ -24,7 +24,7 @@ configs:
     path: data/test.jsonl
 dataset_info:
   features:
-  - name: pn
+  - name: tech_solution
     dtype: string
   - name: apdt
     dtype: int64
@@ -55,7 +55,7 @@ dataset_info:
 
 [简体中文](README.zh.md) | **English**
 
-This dataset contains 80 patent novelty search examples. Each example has a query patent publication number and publication numbers for examiner cited X type prior art. The examples include references cited for the query patent and for members of its patent family.
+This dataset contains 80 patent novelty search examples. Each example includes the technical solution text used as the retrieval input and publication numbers for examiner cited X type prior art. The examples include references cited for the underlying patent and for members of its patent family.
 
 ## Dataset overview
 
@@ -74,12 +74,12 @@ from datasets import load_dataset
 
 test = load_dataset("PatSnap/novelty-search-bench", split="test")
 print(len(test))  # 80
-print(test[0]["pn"], test[0]["pn_x"])
+print(test[0]["tech_solution"], test[0]["pn_x"])
 ```
 
 | Field | Type | Meaning |
 | --- | --- | --- |
-| `pn` | string | Query patent publication number |
+| `tech_solution` | string | Technical solution text used as the retrieval input |
 | `apdt` | int64 | Application date, `YYYYMMDD` |
 | `ipc` | list[string] | IPC codes |
 | `ipc_main` | string | Main IPC section |
@@ -91,7 +91,7 @@ print(test[0]["pn"], test[0]["pn_x"])
 | `pn_family_x` | list[string] | X type references cited for query family members |
 | `pn_family_x_family` | list[string] | Publication numbers in the families of `pn_family_x` references |
 
-The file is JSONL with one example per line. `pn_x` and `pn_family_x` contain cited publication numbers; the corresponding `*_family` fields contain publication numbers for patents in their families. Query specification text is not included.
+The file is JSONL with one example per line. `tech_solution` contains the retrieval input text. `pn_x` and `pn_family_x` contain cited publication numbers; the corresponding `*_family` fields contain publication numbers for patents in their families.
 
 ## Scope and limitations
 
