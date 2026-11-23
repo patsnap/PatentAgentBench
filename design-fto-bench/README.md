@@ -13,7 +13,6 @@ Patsnap Design FTO Bench is a dataset for **design patent Freedom-To-Operate (FT
 | Query images | 80 PNGs under `asset/` |
 | Target patent numbers | 98 entries across 80 examples |
 | Picture type | Invalidation Proceedings |
-| `query_pn` availability | Present in 53 examples; null in 27 |
 | License | CC BY-NC 4.0 |
 
 ## Quick Start
@@ -37,7 +36,6 @@ The same dataset is available on [Hugging Face](https://huggingface.co/datasets/
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `query_pn` | nullable string | Query patent publication number, if available |
 | `query_img_path` | string | Query PNG path relative to `asset/` |
 | `target_pns` | list[string] | Annotated target patent publication numbers |
 | `picture_type` | string | Picture type recorded for the example |

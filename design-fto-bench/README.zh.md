@@ -13,7 +13,6 @@ Patsnap Design FTO Bench 是用于**外观设计专利自由实施（FTO）图�
 | 查询图片 | `asset/` 下的 80 张 PNG |
 | 目标专利号 | 80 条样本共 98 个条目 |
 | 图片类型 | Invalidation Proceedings |
-| `query_pn` | 53 条有值；27 条为 `null` |
 | 许可证 | CC BY-NC 4.0 |
 
 ## 快速开始
@@ -39,7 +38,6 @@ print(len(samples), image_path, sample["target_pns"])
 
 | 字段 | 类型 | 说明 |
 |------|------|------|
-| `query_pn` | 可为空的字符串 | 查询专利公开号；可能为 `null` |
 | `query_img_path` | 字符串 | 相对于 `asset/` 的查询图片 PNG 路径 |
 | `target_pns` | 字符串列表 | 标注的目标专利公开号 |
 | `picture_type` | 字符串 | 样本记录的图片类型 |
