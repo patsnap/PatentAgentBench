@@ -85,11 +85,11 @@ Follow the dataset links above for task instructions, schemas, and loading examp
 ## Citation
 
 ```bibtex
-@dataset{patsnap_patentagentbench_2026,
-  title  = {PatentAgentBench (PAB)},
-  author = {Patsnap},
-  year   = {2026},
-  url    = {https://huggingface.co/collections/PatSnap/patentagentbench}
+@article{hu2026patentagentbench,
+  title={PatentAgentBench: Benchmarking LLM Agents with Professional Patent Task Suites},
+  author={Hu, Yijie and Li, Wei and Zhou, Junjie and Jiang, Zhiqi and Jin, Yi and Xu, Licong and Sun, Xinkai and Duan, Kai and Zhang, Lisha},
+  journal={arXiv preprint arXiv:2610.35031},
+  year={2026}
 }
 ```
 
