@@ -10,7 +10,7 @@ PatentAgentBench 用于评测大语言模型与 AI Agent 的专业专利任务�
 
 **8 个数据集 · 中英文任务 · 文本、图像与文档输入**
 
-[网站]([https://www.patentbench.ai/](https://www.patentbench.ai/?utm_source=github&utm_medium=referral&utm_campaign=patentagentbench)) | [论文（arXiv PDF）](https://arxiv.org/pdf/2610.35031) | [🤗 Hugging Face 数据集合集](https://huggingface.co/collections/PatSnap/patentagentbench)
+[网站](https://www.patentbench.ai/?utm_source=github&utm_medium=referral&utm_campaign=patentagentbench) | [论文（arXiv PDF）](https://arxiv.org/pdf/2610.35031) | [🤗 Hugging Face 数据集合集](https://huggingface.co/collections/PatSnap/patentagentbench)
 
 ## 数据集一览
 
@@ -85,11 +85,11 @@ CN：中国；US：美国；EP：欧洲专利局；EU：欧盟；WO：PCT 国际
 ## 引用
 
 ```bibtex
-@dataset{patsnap_patentagentbench_2026,
-  title  = {PatentAgentBench (PAB)},
-  author = {Patsnap},
-  year   = {2026},
-  url    = {https://huggingface.co/collections/PatSnap/patentagentbench}
+@article{hu2026patentagentbench,
+  title={PatentAgentBench: Benchmarking LLM Agents with Professional Patent Task Suites},
+  author={Hu, Yijie and Li, Wei and Zhou, Junjie and Jiang, Zhiqi and Jin, Yi and Xu, Licong and Sun, Xinkai and Duan, Kai and Zhang, Lisha},
+  journal={arXiv preprint arXiv:2610.35031},
+  year={2026}
 }
 ```
 
