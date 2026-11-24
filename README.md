@@ -10,7 +10,7 @@ PatentAgentBench evaluates large language models and AI agents on professional p
 
 **8 datasets · Chinese and English tasks · Text, image, and document inputs**
 
-[Website]([https://www.patentbench.ai/](https://www.patentbench.ai/?utm_source=github&utm_medium=referral&utm_campaign=patentagentbench)) | [Paper (arXiv PDF)](https://arxiv.org/pdf/2610.35031) | [🤗 Hugging Face Dataset Collection](https://huggingface.co/collections/PatSnap/patentagentbench)
+[Website]((https://www.patentbench.ai/?utm_source=github&utm_medium=referral&utm_campaign=patentagentbench)) | [Paper (arXiv PDF)](https://arxiv.org/pdf/2610.35031) | [🤗 Hugging Face Dataset Collection](https://huggingface.co/collections/PatSnap/patentagentbench)
 
 ## Datasets
 
