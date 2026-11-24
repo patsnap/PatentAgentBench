@@ -22,10 +22,10 @@ PatentAgentBench 用于评测大语言模型与 AI Agent 的专业专利任务�
 | [新颖性检索](novelty-search-bench/README.zh.md) | 80 | 检索审查员引用的 X 类现有技术及其同族 | [🤗 查看](https://huggingface.co/datasets/PatSnap/novelty-search-bench) |
 | [专利撰写](patent-drafting-bench/) | 60 | 根据技术交底书撰写权利要求、说明书及必要附图 | [🤗 查看](https://huggingface.co/datasets/PatSnap/patent-drafting-bench) |
 | [专利无效检索](patent-invalidity-search-bench/) | 80 | 根据权利要求检索真实无效案件中的证据 | [🤗 查看](https://huggingface.co/datasets/PatSnap/patent-invalidity-search-bench) |
-| [专利翻译](patent-translation-bench/) | 80 | 评测中英文专利文本翻译 | [🤗 查看](https://huggingface.co/datasets/PatSnap/patent-translation-bench) |
+| [专利翻译](patent-translation-bench/README.zh.md) | 881 个 item | 评测中英文专利文本翻译 | [🤗 查看](https://huggingface.co/datasets/PatSnap/patent-translation-bench) |
 | [审查意见答复（OAR）](oar-bench/) | 40 | 根据审查意见及案件材料撰写答复 | [🤗 查看](https://huggingface.co/datasets/PatSnap/patent-oar-bench) |
 
-数据集规模按测试案例计数。专利翻译包含 80 条数据，共 881 个评测 item。
+数据集规模按测试案例计数，专利翻译例外，列出的是 881 个评测 item。其文本总量约相当于 80 篇平均长度的专利文本。
 
 ## 数据分布
 

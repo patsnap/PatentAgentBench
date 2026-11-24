@@ -22,10 +22,10 @@ PatentAgentBench evaluates large language models and AI agents on professional p
 | [Novelty Search](novelty-search-bench/) | 80 | Retrieve examiner-cited X-type prior art and its patent families | [🤗 View](https://huggingface.co/datasets/PatSnap/novelty-search-bench) |
 | [Patent Drafting](patent-drafting-bench/) | 60 | Draft claims, a specification, and necessary drawings from a technical disclosure | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-drafting-bench) |
 | [Patent Invalidity Search](patent-invalidity-search-bench/) | 80 | Retrieve evidence from real invalidation cases using patent claims | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-invalidity-search-bench) |
-| [Patent Translation](patent-translation-bench/) | 80 | Evaluate Chinese/English patent text translation | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-translation-bench) |
+| [Patent Translation](patent-translation-bench/) | 881 items | Evaluate Chinese/English patent text translation | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-translation-bench) |
 | [Office Action Response (OAR)](oar-bench/) | 40 | Draft responses using Office Actions and case materials | [🤗 View](https://huggingface.co/datasets/PatSnap/patent-oar-bench) |
 
-Dataset scales count test cases. Patent Translation contains 80 samples comprising 881 evaluation items.
+Dataset scales count test cases, except Patent Translation, which lists its 881 evaluation items. Its text volume is roughly equivalent to 80 average-length patent documents.
 
 ## Data distributions
 
