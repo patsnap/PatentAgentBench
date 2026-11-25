@@ -41,9 +41,9 @@ risk-patent application numbers.
 | Public cases | 60 |
 | Jurisdictions | 3 (CN, US, and EP) |
 | IPC sections | 8 (A–H) |
-| Risk-patent entries | 123 |
-| Unique risk-patent application numbers | 120 |
-| Average risk-patent entries per case | 2.05 |
+| Risk-patent entries | 126 |
+| Unique risk-patent application numbers | 123 |
+| Average risk-patent entries per case | 2.10 |
 | Cases with multiple risk-patent entries | 31 (51.7%) |
 
 ### Jurisdiction Distribution
@@ -51,20 +51,20 @@ risk-patent application numbers.
 | Jurisdiction | Cases | Share |
 | --- | ---: | ---: |
 | CN | 30 | 50% |
-| US | 15 | 25% |
-| EP | 15 | 25% |
+| US | 16 | 26.7% |
+| EP | 14 | 23.3% |
 
 ### IPC Section Distribution
 
 | IPC section | A | B | C | D | E | F | G | H |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Cases | 14 | 9 | 4 | 2 | 4 | 8 | 8 | 11 |
+| Cases | 15 | 9 | 3 | 1 | 4 | 9 | 8 | 11 |
 
 ### Risk-Patent Entries per Case
 
 | Number of entries | 1 | 2 | 3 | 4 | 5+ |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Cases | 29 | 17 | 6 | 2 | 6 |
+| Cases | 29 | 16 | 6 | 2 | 7 |
 
 For reference patents, `lang` is normalized by patent `country`: CN to CN
 and EP to EN; all current US records are EN. Within each case,
@@ -115,7 +115,7 @@ the file can be streamed without loading the entire dataset into memory.
 | `lang` | string | Normalized evaluation-language code: CN for CN, EN for EP and current US records |
 | `apno` | string | Risk-patent application number used for evaluation matching |
 
-All 123 public risk-patent entries have non-empty `country`, `lang`, and
+All 126 public risk-patent entries have non-empty `country`, `lang`, and
 `apno` values.
 
 ## Example Record
