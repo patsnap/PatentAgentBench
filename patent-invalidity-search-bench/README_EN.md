@@ -96,6 +96,8 @@ file can be processed as a stream without loading the entire dataset into memory
 | Field | Type | Description |
 | --- | --- | --- |
 | `data_id` | integer | Stable record identifier; values are not guaranteed to be contiguous |
+| `pn` | string | Query patent publication number |
+| `apno` | string | Query patent application number |
 | `ipc_main` | string | Main IPC section, from A to H |
 | `country` | string | Jurisdiction code, currently CN or US |
 | `apdt` | integer | Application date encoded as `YYYYMMDD` |
@@ -130,6 +132,8 @@ placeholders.
 ```json
 {
   "data_id": 4,
+  "pn": "QUERY_PUBLICATION_NUMBER",
+  "apno": "QUERY_APPLICATION_NUMBER",
   "ipc_main": "E",
   "country": "CN",
   "apdt": 20101225,

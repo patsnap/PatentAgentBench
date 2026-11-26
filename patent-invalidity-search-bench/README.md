@@ -92,6 +92,8 @@
 | 字段 | 类型 | 说明 |
 | --- | --- | --- |
 | `data_id` | integer | 稳定的数据记录标识，不保证连续 |
+| `pn` | string | 查询专利公开号 |
+| `apno` | string | 查询专利申请号 |
 | `ipc_main` | string | IPC 主分类部，取值为 A–H |
 | `country` | string | 国家或地区代码，当前为 CN 或 US |
 | `apdt` | integer | 申请日，格式为 `YYYYMMDD` |
@@ -121,6 +123,8 @@
 ```json
 {
   "data_id": 4,
+  "pn": "QUERY_PUBLICATION_NUMBER",
+  "apno": "QUERY_APPLICATION_NUMBER",
   "ipc_main": "E",
   "country": "CN",
   "apdt": 20101225,
