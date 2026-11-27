@@ -81,10 +81,6 @@ Each criterion includes decision conditions, discrete score levels, and a positi
 
 The scoring instructions specify evidence requirements and deduction attribution. The same defect is not penalized more than once.
 
-## Legal citation text
-
-Legal provision names, numbers, quoted text and explanations remain in the rubrics. URLs are stored in each case's top-level `legal_sources`, associated with criteria through `rubric_names`.
-
 ## Weights and gates
 
 General and case-specific weights sum to **100 per case** and are all positive integers. Case-specific weights are retained. Each of the three gates has weight 1; the remaining general criteria receive the remaining budget according to quality priorities. Use the weights in each case's JSON without reassigning them by item index.
@@ -108,9 +104,3 @@ Any gate score other than 1, including 0.5, triggers a single 80-point deduction
 | 20 | 80 | 10 |
 | 26 | 74 | 5 |
 | 30 | 70 | 19 |
-
-## Evaluation inputs
-
-Drafting tasks use technical disclosures as inputs and require a DOCX application as the deliverable. For evaluation, the judge receives only the text, tables and drawings parsed from the candidate DOCX, together with its rubrics. The technical disclosure and original task instruction are not sent to the judge. Jurisdiction and output language are retained as evaluation metadata. Technical-fidelity judgments use facts explicitly stated in the rubrics, consistency within the application, and relevant technical knowledge; they must not speculate about an unavailable disclosure.
-
-Attribute each defect according to the scoring instructions to avoid duplicate deductions; assess all three gates independently. Batch pass rate is the number of passing outputs divided by the number successfully scored. Evaluation errors are reported separately rather than counted as model scores of zero. If no output is successfully scored, pass rate is null.
