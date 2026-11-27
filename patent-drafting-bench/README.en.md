@@ -71,12 +71,46 @@ Each task includes general and case-specific rubrics. General criteria assess cl
 
 | Rubric category | Total items across all tasks | Items per task |
 | --- | ---: | --- |
-| General criteria | 900 | 15 |
+| General criteria | 1560 | 26 |
 | Case-specific criteria | 77 | 0–4 |
-| **Total** | **977** | **15–19** |
+| **Total** | **1637** | **26–30** |
 
 Each criterion includes decision conditions, discrete score levels, and a positive integer weight. Score levels are 0, 0.5, and 1; some criteria use only 0 and 1. Evaluators select the applicable level for each criterion and calculate a score out of 100:
 
-**Score = 100 × Σ(weight × level score) ÷ Σ(weights)**
+**Base score = Σ(weight × level score), with all weights summing to 100 per case.**
 
 The scoring instructions specify evidence requirements and deduction attribution. The same defect is not penalized more than once.
+
+## Legal citation text
+
+Legal provision names, numbers, quoted text and explanations remain in the rubrics. URLs are stored in each case's top-level `legal_sources`, associated with criteria through `rubric_names`.
+
+## Weights and gates
+
+General and case-specific weights sum to **100 per case** and are all positive integers. Case-specific weights are retained. Each of the three gates has weight 1; the remaining general criteria receive the remaining budget according to quality priorities. Use the weights in each case's JSON without reassigning them by item index.
+
+The three gates assess:
+
+- Subject-matter eligibility of the claims.
+- Formal completeness of the specification.
+- Technical fidelity, including fabrication, implausible technical content, or internal contradictions.
+
+Any gate score other than 1, including 0.5, triggers a single 80-point deduction from the base score. Multiple triggered gates do not stack; the final score is floored at zero. Unity and formal completeness of the claims are ordinary weighted criteria.
+
+**Final score = max(0, base score − gate deduction). A final score ≥ 80 passes.**
+
+| Case-specific weight total | General weight total | Cases |
+| ---: | ---: | ---: |
+| 0 | 100 | 16 |
+| 6 | 94 | 5 |
+| 10 | 90 | 2 |
+| 16 | 84 | 3 |
+| 20 | 80 | 10 |
+| 26 | 74 | 5 |
+| 30 | 70 | 19 |
+
+## Evaluation inputs
+
+Drafting tasks use technical disclosures as inputs and require a DOCX application as the deliverable. For evaluation, the judge receives only the text, tables and drawings parsed from the candidate DOCX, together with its rubrics. The technical disclosure and original task instruction are not sent to the judge. Jurisdiction and output language are retained as evaluation metadata. Technical-fidelity judgments use facts explicitly stated in the rubrics, consistency within the application, and relevant technical knowledge; they must not speculate about an unavailable disclosure.
+
+Attribute each defect according to the scoring instructions to avoid duplicate deductions; assess all three gates independently. Batch pass rate is the number of passing outputs divided by the number successfully scored. Evaluation errors are reported separately rather than counted as model scores of zero. If no output is successfully scored, pass rate is null.
