@@ -38,11 +38,11 @@ print(test[0]["tech_solution"], test[0]["pn_x"])
 | `jurisdiction` | string | 查询专利的司法辖区 |
 | `type` | string | 样本类型；本测试集为 `family` |
 | `pn_x` | list[string] | 查询专利的 X 类引证文献公开号 |
-| `pn_x_family` | list[string] | `pn_x` 所对应专利同族的公开号 |
+| `pn_x_family` | object | 以同族 ID 为键、该同族公开号列表为值，记录 `pn_x` 对应文献的同族 |
 | `pn_family_x` | list[string] | 查询专利同族成员的 X 类引证文献公开号 |
-| `pn_family_x_family` | list[string] | `pn_family_x` 所对应专利同族的公开号 |
+| `pn_family_x_family` | object | 以同族 ID 为键、该同族公开号列表为值，记录 `pn_family_x` 对应文献的同族 |
 
-`tech_solution` 记录检索输入文本。`pn_x` 和 `pn_family_x` 记录被引用文献的公开号；对应的 `*_family` 字段记录其专利同族的公开号。
+`tech_solution` 记录检索输入文本。`pn_x` 和 `pn_family_x` 记录被引用文献的公开号；对应的 `*_family` 字段按同族 ID 分组记录各同族的公开号列表。
 
 ## 数据范围
 

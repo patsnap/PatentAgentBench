@@ -41,11 +41,11 @@ dataset_info:
   - name: pn_x
     sequence: string
   - name: pn_x_family
-    sequence: string
+    dtype: json
   - name: pn_family_x
     sequence: string
   - name: pn_family_x_family
-    sequence: string
+    dtype: json
   splits:
   - name: test
     num_examples: 80
@@ -87,11 +87,11 @@ print(test[0]["tech_solution"], test[0]["pn_x"])
 | `jurisdiction` | string | Query patent jurisdiction |
 | `type` | string | Example type, `family` in this split |
 | `pn_x` | list[string] | X type references cited for the query patent |
-| `pn_x_family` | list[string] | Publication numbers in the families of `pn_x` references |
+| `pn_x_family` | object | Family ID to publication-number list for `pn_x` references |
 | `pn_family_x` | list[string] | X type references cited for query family members |
-| `pn_family_x_family` | list[string] | Publication numbers in the families of `pn_family_x` references |
+| `pn_family_x_family` | object | Family ID to publication-number list for `pn_family_x` references |
 
-The file is JSONL with one example per line. `tech_solution` contains the retrieval input text. `pn_x` and `pn_family_x` contain cited publication numbers; the corresponding `*_family` fields contain publication numbers for patents in their families.
+The file is JSONL with one example per line. `tech_solution` contains the retrieval input text. `pn_x` and `pn_family_x` contain cited publication numbers; the corresponding `*_family` fields group family publication numbers by patent family ID.
 
 ## Scope and limitations
 
